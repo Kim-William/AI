@@ -1,0 +1,2000 @@
+Customer ID,How did you hear about Gravity,How do you prefer to buy books
+1,Online Advertisement,Other
+2,Friend Recommendation,Online
+3,Online Advertisement,Online
+4,Online Advertisement,Book Club
+5,Friend Recommendation,Online
+6,Other,Physical Store
+7,Friend Recommendation,Book Club
+8,Online Advertisement,Physical Store
+9,Physical Store,Physical Store
+10,Online Advertisement,Online
+11,Online Advertisement,Online
+12,Online Advertisement,Book Club
+13,Web Search,Online
+14,Online Advertisement,Other
+15,Physical Store,Book Club
+16,Online Advertisement,Physical Store
+17,Friend Recommendation,Online
+18,Friend Recommendation,Online
+19,Friend Recommendation,Online
+20,Online Advertisement,Online
+21,Physical Store,Online
+22,Physical Store,Online
+23,Friend Recommendation,Online
+24,Web Search,Physical Store
+25,Web Search,Book Club
+26,Web Search,Physical Store
+27,Online Advertisement,Physical Store
+28,Friend Recommendation,Other
+29,Physical Store,Physical Store
+30,Web Search,Physical Store
+31,Friend Recommendation,Online
+32,Friend Recommendation,Book Club
+33,Friend Recommendation,Online
+34,Friend Recommendation,Online
+35,Other,Online
+36,Web Search,Online
+37,Physical Store,Book Club
+38,Online Advertisement,Online
+39,Web Search,Other
+40,Physical Store,Online
+41,Online Advertisement,Online
+42,Friend Recommendation,Online
+43,Physical Store,Online
+44,Web Search,Physical Store
+45,Online Advertisement,Online
+46,Online Advertisement,Online
+47,Friend Recommendation,Online
+48,Friend Recommendation,Online
+49,Web Search,Online
+50,Friend Recommendation,Online
+51,Web Search,Online
+52,Online Advertisement,Online
+53,Physical Store,Online
+54,Web Search,Physical Store
+55,Web Search,Online
+56,Online Advertisement,Online
+57,Physical Store,Online
+58,Web Search,Online
+59,Online Advertisement,Online
+60,Web Search,Physical Store
+61,Friend Recommendation,Physical Store
+62,Web Search,Online
+63,Friend Recommendation,Physical Store
+64,Web Search,Online
+65,Online Advertisement,Online
+66,Friend Recommendation,Physical Store
+67,Physical Store,Online
+68,Web Search,Online
+69,Friend Recommendation,Physical Store
+70,Web Search,Book Club
+71,Web Search,Online
+72,Friend Recommendation,Book Club
+73,Friend Recommendation,Physical Store
+74,Friend Recommendation,Online
+75,Online Advertisement,Online
+76,Physical Store,Online
+77,Physical Store,Online
+78,Web Search,Online
+79,Friend Recommendation,Online
+80,Other,Online
+81,Friend Recommendation,Book Club
+82,Online Advertisement,Online
+83,Web Search,Online
+84,Web Search,Book Club
+85,Friend Recommendation,Physical Store
+86,Web Search,Book Club
+87,Friend Recommendation,Online
+88,Physical Store,Physical Store
+89,Web Search,Online
+90,Friend Recommendation,Physical Store
+91,Web Search,Online
+92,Friend Recommendation,Online
+93,Physical Store,Physical Store
+94,Web Search,Online
+95,Web Search,Physical Store
+96,Online Advertisement,Online
+97,Web Search,Online
+98,Friend Recommendation,Physical Store
+99,Online Advertisement,Online
+100,Web Search,Online
+101,Other,Physical Store
+102,Other,Book Club
+103,Online Advertisement,Online
+104,Physical Store,Online
+105,Friend Recommendation,Physical Store
+106,Online Advertisement,Online
+107,Online Advertisement,Online
+108,Friend Recommendation,Online
+109,Friend Recommendation,Physical Store
+110,Web Search,Online
+111,Physical Store,Other
+112,Physical Store,Online
+113,Physical Store,Other
+114,Friend Recommendation,Online
+115,Web Search,Online
+116,Web Search,Physical Store
+117,Web Search,Physical Store
+118,Friend Recommendation,Online
+119,Physical Store,Online
+120,Online Advertisement,Book Club
+121,Online Advertisement,Book Club
+122,Web Search,Online
+123,Web Search,Online
+124,Web Search,Online
+125,Online Advertisement,Physical Store
+126,Friend Recommendation,Online
+127,Physical Store,Online
+128,Friend Recommendation,Online
+129,Physical Store,Online
+130,Friend Recommendation,Book Club
+131,Online Advertisement,Online
+132,Physical Store,Book Club
+133,Web Search,Online
+134,Web Search,Physical Store
+135,Friend Recommendation,Online
+136,Online Advertisement,Online
+137,Other,Online
+138,Web Search,Online
+139,Web Search,Online
+140,Friend Recommendation,Physical Store
+141,Other,Physical Store
+142,Web Search,Online
+143,Friend Recommendation,Physical Store
+144,Physical Store,Online
+145,Online Advertisement,Online
+146,Online Advertisement,Physical Store
+147,Friend Recommendation,Physical Store
+148,Friend Recommendation,Physical Store
+149,Online Advertisement,Online
+150,Other,Online
+151,Web Search,Physical Store
+152,Online Advertisement,Book Club
+153,Web Search,Physical Store
+154,Web Search,Online
+155,Online Advertisement,Online
+156,Friend Recommendation,Book Club
+157,Online Advertisement,Physical Store
+158,Physical Store,Online
+159,Friend Recommendation,Online
+160,Friend Recommendation,Online
+161,Friend Recommendation,Online
+162,Physical Store,Online
+163,Physical Store,Online
+164,Web Search,Online
+165,Online Advertisement,Online
+166,Friend Recommendation,Physical Store
+167,Physical Store,Physical Store
+168,Physical Store,Book Club
+169,Friend Recommendation,Online
+170,Friend Recommendation,Book Club
+171,Online Advertisement,Online
+172,Friend Recommendation,Online
+173,Friend Recommendation,Book Club
+174,Friend Recommendation,Other
+175,Friend Recommendation,Online
+176,Web Search,Online
+177,Friend Recommendation,Online
+178,Online Advertisement,Physical Store
+179,Online Advertisement,Online
+180,Web Search,Physical Store
+181,Web Search,Physical Store
+182,Physical Store,Online
+183,Friend Recommendation,Online
+184,Friend Recommendation,Online
+185,Online Advertisement,Online
+186,Friend Recommendation,Physical Store
+187,Web Search,Online
+188,Physical Store,Online
+189,Online Advertisement,Book Club
+190,Friend Recommendation,Online
+191,Physical Store,Online
+192,Friend Recommendation,Online
+193,Friend Recommendation,Online
+194,Web Search,Online
+195,Physical Store,Online
+196,Friend Recommendation,Physical Store
+197,Friend Recommendation,Online
+198,Online Advertisement,Physical Store
+199,Web Search,Physical Store
+200,Friend Recommendation,Online
+201,Online Advertisement,Online
+202,Web Search,Online
+203,Friend Recommendation,Online
+204,Online Advertisement,Other
+205,Friend Recommendation,Online
+206,Online Advertisement,Online
+207,Web Search,Other
+208,Online Advertisement,Online
+209,Friend Recommendation,Physical Store
+210,Friend Recommendation,Online
+211,Web Search,Online
+212,Web Search,Online
+213,Online Advertisement,Online
+214,Web Search,Online
+215,Physical Store,Online
+216,Friend Recommendation,Online
+217,Online Advertisement,Physical Store
+218,Web Search,Online
+219,Friend Recommendation,Physical Store
+220,Physical Store,Physical Store
+221,Web Search,Online
+222,Online Advertisement,Online
+223,Web Search,Online
+224,Friend Recommendation,Online
+225,Online Advertisement,Physical Store
+226,Friend Recommendation,Online
+227,Friend Recommendation,Online
+228,Online Advertisement,Online
+229,Friend Recommendation,Physical Store
+230,Friend Recommendation,Online
+231,Friend Recommendation,Online
+232,Other,Online
+233,Web Search,Online
+234,Web Search,Online
+235,Friend Recommendation,Online
+236,Web Search,Online
+237,Web Search,Physical Store
+238,Web Search,Online
+239,Friend Recommendation,Online
+240,Online Advertisement,Online
+241,Web Search,Online
+242,Friend Recommendation,Physical Store
+243,Web Search,Physical Store
+244,Online Advertisement,Online
+245,Online Advertisement,Online
+246,Web Search,Physical Store
+247,Online Advertisement,Book Club
+248,Web Search,Physical Store
+249,Physical Store,Physical Store
+250,Online Advertisement,Online
+251,Web Search,Online
+252,Friend Recommendation,Book Club
+253,Web Search,Online
+254,Web Search,Online
+255,Web Search,Book Club
+256,Online Advertisement,Online
+257,Physical Store,Book Club
+258,Online Advertisement,Physical Store
+259,Web Search,Physical Store
+260,Other,Online
+261,Physical Store,Physical Store
+262,Physical Store,Online
+263,Online Advertisement,Online
+264,Friend Recommendation,Other
+265,Online Advertisement,Online
+266,Web Search,Book Club
+267,Friend Recommendation,Online
+268,Online Advertisement,Book Club
+269,Web Search,Book Club
+270,Friend Recommendation,Online
+271,Other,Physical Store
+272,Friend Recommendation,Online
+273,Web Search,Online
+274,Physical Store,Online
+275,Physical Store,Other
+276,Friend Recommendation,Online
+277,Physical Store,Other
+278,Web Search,Online
+279,Web Search,Physical Store
+280,Physical Store,Online
+281,Physical Store,Physical Store
+282,Web Search,Physical Store
+283,Other,Physical Store
+284,Friend Recommendation,Online
+285,Online Advertisement,Online
+286,Online Advertisement,Book Club
+287,Friend Recommendation,Online
+288,Web Search,Online
+289,Other,Physical Store
+290,Physical Store,Online
+291,Friend Recommendation,Online
+292,Online Advertisement,Online
+293,Web Search,Online
+294,Online Advertisement,Online
+295,Friend Recommendation,Physical Store
+296,Friend Recommendation,Physical Store
+297,Web Search,Online
+298,Online Advertisement,Physical Store
+299,Physical Store,Online
+300,Friend Recommendation,Online
+301,Physical Store,Online
+302,Friend Recommendation,Online
+303,Web Search,Other
+304,Friend Recommendation,Physical Store
+305,Web Search,Online
+306,Physical Store,Online
+307,Physical Store,Online
+308,Web Search,Online
+309,Physical Store,Online
+310,Friend Recommendation,Physical Store
+311,Friend Recommendation,Physical Store
+312,Friend Recommendation,Physical Store
+313,Friend Recommendation,Book Club
+314,Web Search,Other
+315,Online Advertisement,Book Club
+316,Web Search,Online
+317,Web Search,Online
+318,Web Search,Other
+319,Friend Recommendation,Physical Store
+320,Physical Store,Online
+321,Physical Store,Online
+322,Friend Recommendation,Online
+323,Physical Store,Online
+324,Physical Store,Physical Store
+325,Friend Recommendation,Physical Store
+326,Online Advertisement,Book Club
+327,Physical Store,Physical Store
+328,Friend Recommendation,Online
+329,Online Advertisement,Online
+330,Other,Physical Store
+331,Physical Store,Physical Store
+332,Online Advertisement,Physical Store
+333,Online Advertisement,Physical Store
+334,Friend Recommendation,Online
+335,Online Advertisement,Other
+336,Friend Recommendation,Other
+337,Friend Recommendation,Online
+338,Friend Recommendation,Online
+339,Online Advertisement,Other
+340,Friend Recommendation,Online
+341,Web Search,Book Club
+342,Friend Recommendation,Other
+343,Web Search,Physical Store
+344,Online Advertisement,Online
+345,Online Advertisement,Online
+346,Web Search,Book Club
+347,Friend Recommendation,Online
+348,Friend Recommendation,Physical Store
+349,Physical Store,Physical Store
+350,Friend Recommendation,Physical Store
+351,Online Advertisement,Online
+352,Online Advertisement,Physical Store
+353,Online Advertisement,Online
+354,Friend Recommendation,Online
+355,Physical Store,Physical Store
+356,Friend Recommendation,Online
+357,Web Search,Online
+358,Web Search,Online
+359,Online Advertisement,Online
+360,Friend Recommendation,Online
+361,Friend Recommendation,Online
+362,Physical Store,Physical Store
+363,Physical Store,Online
+364,Web Search,Physical Store
+365,Online Advertisement,Online
+366,Physical Store,Online
+367,Friend Recommendation,Online
+368,Online Advertisement,Online
+369,Web Search,Online
+370,Physical Store,Online
+371,Friend Recommendation,Physical Store
+372,Friend Recommendation,Book Club
+373,Physical Store,Online
+374,Online Advertisement,Online
+375,Friend Recommendation,Online
+376,Web Search,Physical Store
+377,Friend Recommendation,Online
+378,Physical Store,Online
+379,Web Search,Online
+380,Web Search,Physical Store
+381,Physical Store,Physical Store
+382,Friend Recommendation,Other
+383,Online Advertisement,Online
+384,Web Search,Online
+385,Online Advertisement,Book Club
+386,Friend Recommendation,Online
+387,Friend Recommendation,Online
+388,Friend Recommendation,Online
+389,Online Advertisement,Online
+390,Friend Recommendation,Physical Store
+391,Web Search,Online
+392,Friend Recommendation,Physical Store
+393,Online Advertisement,Physical Store
+394,Online Advertisement,Online
+395,Friend Recommendation,Online
+396,Web Search,Physical Store
+397,Online Advertisement,Online
+398,Web Search,Online
+399,Friend Recommendation,Online
+400,Web Search,Other
+401,Friend Recommendation,Physical Store
+402,Friend Recommendation,Online
+403,Online Advertisement,Online
+404,Physical Store,Online
+405,Physical Store,Online
+406,Friend Recommendation,Online
+407,Online Advertisement,Online
+408,Web Search,Online
+409,Web Search,Online
+410,Online Advertisement,Online
+411,Friend Recommendation,Book Club
+412,Friend Recommendation,Physical Store
+413,Web Search,Physical Store
+414,Online Advertisement,Physical Store
+415,Web Search,Online
+416,Friend Recommendation,Physical Store
+417,Physical Store,Online
+418,Web Search,Online
+419,Web Search,Online
+420,Physical Store,Physical Store
+421,Other,Book Club
+422,Physical Store,Online
+423,Web Search,Book Club
+424,Online Advertisement,Online
+425,Friend Recommendation,Physical Store
+426,Physical Store,Online
+427,Physical Store,Physical Store
+428,Friend Recommendation,Online
+429,Physical Store,Online
+430,Friend Recommendation,Book Club
+431,Friend Recommendation,Physical Store
+432,Web Search,Online
+433,Physical Store,Online
+434,Friend Recommendation,Online
+435,Friend Recommendation,Physical Store
+436,Web Search,Physical Store
+437,Physical Store,Other
+438,Friend Recommendation,Online
+439,Web Search,Online
+440,Physical Store,Online
+441,Friend Recommendation,Online
+442,Web Search,Physical Store
+443,Online Advertisement,Online
+444,Physical Store,Physical Store
+445,Other,Book Club
+446,Friend Recommendation,Online
+447,Online Advertisement,Online
+448,Web Search,Physical Store
+449,Friend Recommendation,Online
+450,Physical Store,Online
+451,Web Search,Online
+452,Other,Physical Store
+453,Other,Online
+454,Web Search,Online
+455,Web Search,Physical Store
+456,Physical Store,Physical Store
+457,Friend Recommendation,Other
+458,Online Advertisement,Online
+459,Online Advertisement,Physical Store
+460,Online Advertisement,Online
+461,Friend Recommendation,Online
+462,Friend Recommendation,Online
+463,Online Advertisement,Online
+464,Physical Store,Online
+465,Web Search,Book Club
+466,Online Advertisement,Online
+467,Friend Recommendation,Online
+468,Online Advertisement,Online
+469,Online Advertisement,Physical Store
+470,Web Search,Online
+471,Web Search,Physical Store
+472,Web Search,Online
+473,Web Search,Book Club
+474,Friend Recommendation,Physical Store
+475,Friend Recommendation,Physical Store
+476,Online Advertisement,Online
+477,Friend Recommendation,Book Club
+478,Friend Recommendation,Online
+479,Friend Recommendation,Online
+480,Friend Recommendation,Online
+481,Web Search,Other
+482,Online Advertisement,Book Club
+483,Friend Recommendation,Online
+484,Friend Recommendation,Online
+485,Other,Online
+486,Physical Store,Online
+487,Web Search,Online
+488,Web Search,Online
+489,Friend Recommendation,Online
+490,Online Advertisement,Online
+491,Friend Recommendation,Online
+492,Web Search,Online
+493,Web Search,Physical Store
+494,Web Search,Physical Store
+495,Physical Store,Physical Store
+496,Online Advertisement,Physical Store
+497,Web Search,Physical Store
+498,Friend Recommendation,Physical Store
+499,Other,Online
+500,Physical Store,Online
+501,Web Search,Physical Store
+502,Web Search,Online
+503,Other,Online
+504,Friend Recommendation,Physical Store
+505,Web Search,Physical Store
+506,Other,Physical Store
+507,Physical Store,Online
+508,Web Search,Online
+509,Online Advertisement,Online
+510,Online Advertisement,Online
+511,Physical Store,Online
+512,Online Advertisement,Online
+513,Web Search,Online
+514,Friend Recommendation,Other
+515,Friend Recommendation,Online
+516,Friend Recommendation,Online
+517,Friend Recommendation,Physical Store
+518,Web Search,Online
+519,Physical Store,Online
+520,Friend Recommendation,Book Club
+521,Physical Store,Online
+522,Friend Recommendation,Other
+523,Web Search,Book Club
+524,Web Search,Online
+525,Online Advertisement,Book Club
+526,Online Advertisement,Physical Store
+527,Web Search,Online
+528,Web Search,Online
+529,Online Advertisement,Online
+530,Physical Store,Online
+531,Online Advertisement,Online
+532,Physical Store,Physical Store
+533,Physical Store,Online
+534,Physical Store,Online
+535,Friend Recommendation,Online
+536,Physical Store,Online
+537,Online Advertisement,Physical Store
+538,Online Advertisement,Physical Store
+539,Physical Store,Online
+540,Friend Recommendation,Physical Store
+541,Physical Store,Online
+542,Friend Recommendation,Online
+543,Friend Recommendation,Physical Store
+544,Online Advertisement,Online
+545,Physical Store,Online
+546,Friend Recommendation,Physical Store
+547,Web Search,Online
+548,Friend Recommendation,Book Club
+549,Physical Store,Online
+550,Physical Store,Online
+551,Physical Store,Other
+552,Friend Recommendation,Online
+553,Online Advertisement,Online
+554,Other,Physical Store
+555,Friend Recommendation,Online
+556,Web Search,Book Club
+557,Online Advertisement,Book Club
+558,Online Advertisement,Online
+559,Web Search,Online
+560,Web Search,Physical Store
+561,Other,Physical Store
+562,Friend Recommendation,Physical Store
+563,Web Search,Online
+564,Physical Store,Physical Store
+565,Physical Store,Other
+566,Web Search,Physical Store
+567,Online Advertisement,Physical Store
+568,Web Search,Online
+569,Physical Store,Book Club
+570,Web Search,Online
+571,Friend Recommendation,Book Club
+572,Other,Physical Store
+573,Web Search,Physical Store
+574,Online Advertisement,Online
+575,Online Advertisement,Online
+576,Friend Recommendation,Physical Store
+577,Web Search,Book Club
+578,Friend Recommendation,Physical Store
+579,Web Search,Physical Store
+580,Friend Recommendation,Online
+581,Online Advertisement,Online
+582,Online Advertisement,Book Club
+583,Physical Store,Online
+584,Physical Store,Online
+585,Online Advertisement,Physical Store
+586,Friend Recommendation,Online
+587,Web Search,Book Club
+588,Online Advertisement,Book Club
+589,Physical Store,Physical Store
+590,Web Search,Online
+591,Web Search,Online
+592,Friend Recommendation,Physical Store
+593,Other,Physical Store
+594,Online Advertisement,Online
+595,Friend Recommendation,Online
+596,Friend Recommendation,Online
+597,Physical Store,Book Club
+598,Friend Recommendation,Other
+599,Online Advertisement,Online
+600,Online Advertisement,Online
+601,Friend Recommendation,Physical Store
+602,Web Search,Online
+603,Friend Recommendation,Online
+604,Web Search,Other
+605,Friend Recommendation,Online
+606,Web Search,Other
+607,Online Advertisement,Online
+608,Friend Recommendation,Online
+609,Web Search,Online
+610,Friend Recommendation,Online
+611,Physical Store,Online
+612,Physical Store,Physical Store
+613,Online Advertisement,Online
+614,Friend Recommendation,Online
+615,Web Search,Online
+616,Online Advertisement,Online
+617,Web Search,Book Club
+618,Physical Store,Book Club
+619,Friend Recommendation,Online
+620,Physical Store,Online
+621,Physical Store,Physical Store
+622,Web Search,Book Club
+623,Web Search,Online
+624,Physical Store,Online
+625,Friend Recommendation,Online
+626,Other,Physical Store
+627,Other,Online
+628,Friend Recommendation,Online
+629,Online Advertisement,Physical Store
+630,Friend Recommendation,Other
+631,Web Search,Online
+632,Web Search,Physical Store
+633,Online Advertisement,Online
+634,Friend Recommendation,Online
+635,Friend Recommendation,Online
+636,Web Search,Online
+637,Web Search,Online
+638,Physical Store,Online
+639,Friend Recommendation,Physical Store
+640,Other,Physical Store
+641,Online Advertisement,Other
+642,Friend Recommendation,Online
+643,Friend Recommendation,Online
+644,Physical Store,Book Club
+645,Online Advertisement,Online
+646,Online Advertisement,Other
+647,Physical Store,Physical Store
+648,Friend Recommendation,Physical Store
+649,Other,Online
+650,Online Advertisement,Online
+651,Physical Store,Online
+652,Physical Store,Online
+653,Online Advertisement,Book Club
+654,Physical Store,Online
+655,Friend Recommendation,Other
+656,Friend Recommendation,Online
+657,Friend Recommendation,Online
+658,Friend Recommendation,Online
+659,Web Search,Online
+660,Other,Other
+661,Web Search,Online
+662,Friend Recommendation,Physical Store
+663,Friend Recommendation,Physical Store
+664,Online Advertisement,Online
+665,Web Search,Online
+666,Web Search,Online
+667,Online Advertisement,Other
+668,Online Advertisement,Online
+669,Physical Store,Online
+670,Physical Store,Online
+671,Online Advertisement,Other
+672,Friend Recommendation,Book Club
+673,Friend Recommendation,Online
+674,Friend Recommendation,Book Club
+675,Web Search,Physical Store
+676,Physical Store,Online
+677,Friend Recommendation,Online
+678,Web Search,Online
+679,Web Search,Online
+680,Online Advertisement,Physical Store
+681,Web Search,Online
+682,Friend Recommendation,Book Club
+683,Other,Online
+684,Web Search,Online
+685,Physical Store,Physical Store
+686,Physical Store,Online
+687,Friend Recommendation,Physical Store
+688,Online Advertisement,Online
+689,Friend Recommendation,Online
+690,Web Search,Other
+691,Friend Recommendation,Online
+692,Friend Recommendation,Online
+693,Physical Store,Online
+694,Friend Recommendation,Book Club
+695,Other,Physical Store
+696,Friend Recommendation,Book Club
+697,Physical Store,Other
+698,Friend Recommendation,Online
+699,Physical Store,Physical Store
+700,Friend Recommendation,Online
+701,Friend Recommendation,Physical Store
+702,Friend Recommendation,Online
+703,Friend Recommendation,Online
+704,Physical Store,Book Club
+705,Friend Recommendation,Online
+706,Web Search,Online
+707,Web Search,Online
+708,Web Search,Online
+709,Friend Recommendation,Online
+710,Web Search,Physical Store
+711,Web Search,Physical Store
+712,Online Advertisement,Online
+713,Web Search,Physical Store
+714,Friend Recommendation,Online
+715,Online Advertisement,Other
+716,Web Search,Physical Store
+717,Other,Online
+718,Online Advertisement,Online
+719,Online Advertisement,Online
+720,Online Advertisement,Physical Store
+721,Friend Recommendation,Book Club
+722,Friend Recommendation,Physical Store
+723,Online Advertisement,Book Club
+724,Physical Store,Online
+725,Physical Store,Physical Store
+726,Physical Store,Online
+727,Online Advertisement,Online
+728,Friend Recommendation,Book Club
+729,Physical Store,Online
+730,Physical Store,Online
+731,Friend Recommendation,Online
+732,Web Search,Book Club
+733,Online Advertisement,Physical Store
+734,Friend Recommendation,Book Club
+735,Online Advertisement,Physical Store
+736,Online Advertisement,Book Club
+737,Online Advertisement,Physical Store
+738,Online Advertisement,Online
+739,Friend Recommendation,Online
+740,Web Search,Online
+741,Online Advertisement,Book Club
+742,Friend Recommendation,Online
+743,Online Advertisement,Other
+744,Friend Recommendation,Online
+745,Physical Store,Online
+746,Online Advertisement,Online
+747,Online Advertisement,Online
+748,Web Search,Physical Store
+749,Web Search,Online
+750,Web Search,Online
+751,Web Search,Book Club
+752,Online Advertisement,Online
+753,Online Advertisement,Online
+754,Online Advertisement,Online
+755,Friend Recommendation,Physical Store
+756,Physical Store,Online
+757,Physical Store,Book Club
+758,Physical Store,Online
+759,Friend Recommendation,Physical Store
+760,Web Search,Online
+761,Web Search,Online
+762,Online Advertisement,Online
+763,Friend Recommendation,Book Club
+764,Friend Recommendation,Physical Store
+765,Online Advertisement,Physical Store
+766,Online Advertisement,Other
+767,Web Search,Online
+768,Online Advertisement,Online
+769,Web Search,Physical Store
+770,Online Advertisement,Online
+771,Friend Recommendation,Online
+772,Physical Store,Online
+773,Web Search,Online
+774,Web Search,Online
+775,Online Advertisement,Book Club
+776,Other,Physical Store
+777,Other,Online
+778,Friend Recommendation,Book Club
+779,Physical Store,Physical Store
+780,Online Advertisement,Physical Store
+781,Friend Recommendation,Online
+782,Web Search,Online
+783,Friend Recommendation,Physical Store
+784,Web Search,Online
+785,Web Search,Online
+786,Friend Recommendation,Online
+787,Online Advertisement,Physical Store
+788,Friend Recommendation,Online
+789,Friend Recommendation,Physical Store
+790,Physical Store,Online
+791,Online Advertisement,Online
+792,Web Search,Online
+793,Other,Online
+794,Friend Recommendation,Physical Store
+795,Online Advertisement,Physical Store
+796,Web Search,Book Club
+797,Physical Store,Physical Store
+798,Physical Store,Online
+799,Physical Store,Online
+800,Web Search,Online
+801,Physical Store,Online
+802,Friend Recommendation,Online
+803,Online Advertisement,Online
+804,Friend Recommendation,Online
+805,Physical Store,Book Club
+806,Web Search,Physical Store
+807,Web Search,Online
+808,Web Search,Other
+809,Web Search,Online
+810,Online Advertisement,Physical Store
+811,Web Search,Physical Store
+812,Online Advertisement,Online
+813,Friend Recommendation,Book Club
+814,Friend Recommendation,Online
+815,Web Search,Book Club
+816,Friend Recommendation,Book Club
+817,Web Search,Book Club
+818,Web Search,Online
+819,Friend Recommendation,Online
+820,Other,Online
+821,Online Advertisement,Online
+822,Online Advertisement,Online
+823,Friend Recommendation,Online
+824,Friend Recommendation,Online
+825,Other,Online
+826,Friend Recommendation,Online
+827,Friend Recommendation,Online
+828,Friend Recommendation,Online
+829,Friend Recommendation,Physical Store
+830,Online Advertisement,Physical Store
+831,Physical Store,Physical Store
+832,Friend Recommendation,Physical Store
+833,Friend Recommendation,Physical Store
+834,Friend Recommendation,Physical Store
+835,Physical Store,Online
+836,Friend Recommendation,Online
+837,Friend Recommendation,Online
+838,Friend Recommendation,Other
+839,Physical Store,Online
+840,Friend Recommendation,Online
+841,Friend Recommendation,Online
+842,Web Search,Online
+843,Physical Store,Online
+844,Online Advertisement,Online
+845,Web Search,Physical Store
+846,Online Advertisement,Physical Store
+847,Web Search,Online
+848,Friend Recommendation,Other
+849,Online Advertisement,Online
+850,Friend Recommendation,Online
+851,Friend Recommendation,Physical Store
+852,Other,Online
+853,Online Advertisement,Online
+854,Other,Online
+855,Friend Recommendation,Online
+856,Physical Store,Online
+857,Online Advertisement,Online
+858,Online Advertisement,Online
+859,Web Search,Online
+860,Web Search,Online
+861,Web Search,Physical Store
+862,Web Search,Online
+863,Friend Recommendation,Online
+864,Friend Recommendation,Online
+865,Online Advertisement,Online
+866,Friend Recommendation,Physical Store
+867,Friend Recommendation,Physical Store
+868,Web Search,Book Club
+869,Physical Store,Online
+870,Online Advertisement,Physical Store
+871,Friend Recommendation,Online
+872,Friend Recommendation,Physical Store
+873,Physical Store,Physical Store
+874,Friend Recommendation,Online
+875,Web Search,Other
+876,Online Advertisement,Online
+877,Friend Recommendation,Physical Store
+878,Friend Recommendation,Physical Store
+879,Friend Recommendation,Online
+880,Other,Online
+881,Web Search,Book Club
+882,Online Advertisement,Online
+883,Web Search,Other
+884,Friend Recommendation,Book Club
+885,Web Search,Online
+886,Web Search,Physical Store
+887,Friend Recommendation,Physical Store
+888,Physical Store,Online
+889,Web Search,Online
+890,Physical Store,Online
+891,Physical Store,Book Club
+892,Web Search,Online
+893,Web Search,Book Club
+894,Web Search,Online
+895,Online Advertisement,Online
+896,Web Search,Physical Store
+897,Friend Recommendation,Physical Store
+898,Physical Store,Other
+899,Other,Physical Store
+900,Physical Store,Online
+901,Friend Recommendation,Online
+902,Web Search,Other
+903,Physical Store,Book Club
+904,Friend Recommendation,Online
+905,Web Search,Other
+906,Online Advertisement,Online
+907,Web Search,Book Club
+908,Friend Recommendation,Online
+909,Physical Store,Book Club
+910,Friend Recommendation,Book Club
+911,Web Search,Other
+912,Online Advertisement,Online
+913,Physical Store,Physical Store
+914,Physical Store,Book Club
+915,Physical Store,Physical Store
+916,Online Advertisement,Physical Store
+917,Friend Recommendation,Online
+918,Friend Recommendation,Online
+919,Online Advertisement,Online
+920,Friend Recommendation,Physical Store
+921,Web Search,Online
+922,Physical Store,Online
+923,Web Search,Physical Store
+924,Web Search,Online
+925,Friend Recommendation,Online
+926,Web Search,Online
+927,Physical Store,Online
+928,Web Search,Online
+929,Physical Store,Online
+930,Web Search,Online
+931,Web Search,Online
+932,Online Advertisement,Online
+933,Friend Recommendation,Online
+934,Web Search,Online
+935,Web Search,Online
+936,Web Search,Online
+937,Physical Store,Online
+938,Physical Store,Online
+939,Web Search,Online
+940,Web Search,Book Club
+941,Physical Store,Book Club
+942,Friend Recommendation,Online
+943,Physical Store,Online
+944,Physical Store,Online
+945,Web Search,Physical Store
+946,Web Search,Physical Store
+947,Web Search,Online
+948,Web Search,Online
+949,Friend Recommendation,Online
+950,Friend Recommendation,Online
+951,Web Search,Book Club
+952,Online Advertisement,Other
+953,Physical Store,Online
+954,Web Search,Book Club
+955,Online Advertisement,Book Club
+956,Web Search,Book Club
+957,Online Advertisement,Online
+958,Friend Recommendation,Physical Store
+959,Physical Store,Online
+960,Web Search,Online
+961,Friend Recommendation,Online
+962,Other,Online
+963,Online Advertisement,Online
+964,Other,Online
+965,Web Search,Online
+966,Physical Store,Book Club
+967,Other,Online
+968,Friend Recommendation,Book Club
+969,Physical Store,Online
+970,Friend Recommendation,Online
+971,Physical Store,Online
+972,Physical Store,Online
+973,Physical Store,Online
+974,Friend Recommendation,Online
+975,Online Advertisement,Online
+976,Web Search,Online
+977,Web Search,Book Club
+978,Web Search,Online
+979,Web Search,Book Club
+980,Physical Store,Online
+981,Web Search,Physical Store
+982,Online Advertisement,Online
+983,Friend Recommendation,Physical Store
+984,Web Search,Online
+985,Friend Recommendation,Online
+986,Web Search,Online
+987,Friend Recommendation,Online
+988,Online Advertisement,Online
+989,Web Search,Online
+990,Physical Store,Online
+991,Web Search,Online
+992,Web Search,Book Club
+993,Friend Recommendation,Online
+994,Web Search,Physical Store
+995,Friend Recommendation,Online
+996,Online Advertisement,Book Club
+997,Online Advertisement,Online
+998,Physical Store,Online
+999,Physical Store,Online
+1000,Physical Store,Online
+1001,Friend Recommendation,Online
+1002,Friend Recommendation,Online
+1003,Friend Recommendation,Online
+1004,Online Advertisement,Other
+1005,Web Search,Online
+1006,Friend Recommendation,Physical Store
+1007,Friend Recommendation,Physical Store
+1008,Friend Recommendation,Online
+1009,Friend Recommendation,Book Club
+1010,Friend Recommendation,Online
+1011,Web Search,Book Club
+1012,Web Search,Online
+1013,Physical Store,Online
+1014,Other,Online
+1015,Web Search,Physical Store
+1016,Online Advertisement,Online
+1017,Web Search,Other
+1018,Friend Recommendation,Online
+1019,Friend Recommendation,Online
+1020,Physical Store,Online
+1021,Physical Store,Online
+1022,Friend Recommendation,Online
+1023,Web Search,Physical Store
+1024,Online Advertisement,Physical Store
+1025,Online Advertisement,Online
+1026,Friend Recommendation,Online
+1027,Web Search,Physical Store
+1028,Online Advertisement,Physical Store
+1029,Web Search,Physical Store
+1030,Online Advertisement,Online
+1031,Web Search,Online
+1032,Web Search,Online
+1033,Web Search,Book Club
+1034,Friend Recommendation,Book Club
+1035,Online Advertisement,Online
+1036,Physical Store,Online
+1037,Web Search,Physical Store
+1038,Friend Recommendation,Physical Store
+1039,Friend Recommendation,Online
+1040,Online Advertisement,Physical Store
+1041,Friend Recommendation,Physical Store
+1042,Web Search,Physical Store
+1043,Friend Recommendation,Online
+1044,Physical Store,Online
+1045,Web Search,Physical Store
+1046,Online Advertisement,Online
+1047,Online Advertisement,Physical Store
+1048,Friend Recommendation,Online
+1049,Web Search,Physical Store
+1050,Physical Store,Book Club
+1051,Online Advertisement,Physical Store
+1052,Web Search,Online
+1053,Physical Store,Physical Store
+1054,Friend Recommendation,Physical Store
+1055,Web Search,Book Club
+1056,Online Advertisement,Online
+1057,Web Search,Online
+1058,Friend Recommendation,Other
+1059,Physical Store,Other
+1060,Friend Recommendation,Online
+1061,Online Advertisement,Online
+1062,Online Advertisement,Online
+1063,Physical Store,Online
+1064,Friend Recommendation,Physical Store
+1065,Web Search,Online
+1066,Physical Store,Physical Store
+1067,Friend Recommendation,Physical Store
+1068,Physical Store,Online
+1069,Web Search,Physical Store
+1070,Other,Online
+1071,Friend Recommendation,Online
+1072,Friend Recommendation,Physical Store
+1073,Online Advertisement,Online
+1074,Online Advertisement,Online
+1075,Friend Recommendation,Online
+1076,Web Search,Other
+1077,Physical Store,Physical Store
+1078,Web Search,Online
+1079,Online Advertisement,Online
+1080,Physical Store,Physical Store
+1081,Physical Store,Online
+1082,Online Advertisement,Online
+1083,Friend Recommendation,Online
+1084,Friend Recommendation,Book Club
+1085,Friend Recommendation,Physical Store
+1086,Physical Store,Online
+1087,Physical Store,Physical Store
+1088,Web Search,Other
+1089,Friend Recommendation,Online
+1090,Friend Recommendation,Online
+1091,Friend Recommendation,Online
+1092,Friend Recommendation,Online
+1093,Physical Store,Physical Store
+1094,Physical Store,Online
+1095,Web Search,Book Club
+1096,Other,Online
+1097,Physical Store,Book Club
+1098,Online Advertisement,Online
+1099,Online Advertisement,Online
+1100,Physical Store,Online
+1101,Friend Recommendation,Online
+1102,Other,Online
+1103,Online Advertisement,Online
+1104,Friend Recommendation,Online
+1105,Web Search,Online
+1106,Physical Store,Online
+1107,Friend Recommendation,Book Club
+1108,Friend Recommendation,Other
+1109,Friend Recommendation,Online
+1110,Physical Store,Online
+1111,Physical Store,Physical Store
+1112,Friend Recommendation,Online
+1113,Friend Recommendation,Physical Store
+1114,Friend Recommendation,Online
+1115,Web Search,Online
+1116,Friend Recommendation,Online
+1117,Friend Recommendation,Other
+1118,Web Search,Physical Store
+1119,Other,Book Club
+1120,Web Search,Online
+1121,Friend Recommendation,Online
+1122,Friend Recommendation,Online
+1123,Friend Recommendation,Online
+1124,Friend Recommendation,Other
+1125,Online Advertisement,Online
+1126,Online Advertisement,Online
+1127,Friend Recommendation,Physical Store
+1128,Physical Store,Physical Store
+1129,Friend Recommendation,Book Club
+1130,Physical Store,Online
+1131,Online Advertisement,Online
+1132,Friend Recommendation,Online
+1133,Physical Store,Physical Store
+1134,Physical Store,Other
+1135,Web Search,Online
+1136,Online Advertisement,Online
+1137,Online Advertisement,Online
+1138,Physical Store,Physical Store
+1139,Physical Store,Online
+1140,Web Search,Physical Store
+1141,Friend Recommendation,Online
+1142,Friend Recommendation,Online
+1143,Physical Store,Online
+1144,Friend Recommendation,Physical Store
+1145,Friend Recommendation,Physical Store
+1146,Online Advertisement,Online
+1147,Friend Recommendation,Physical Store
+1148,Friend Recommendation,Book Club
+1149,Online Advertisement,Online
+1150,Web Search,Online
+1151,Physical Store,Physical Store
+1152,Web Search,Online
+1153,Friend Recommendation,Online
+1154,Friend Recommendation,Online
+1155,Online Advertisement,Physical Store
+1156,Friend Recommendation,Online
+1157,Friend Recommendation,Online
+1158,Online Advertisement,Online
+1159,Web Search,Book Club
+1160,Web Search,Physical Store
+1161,Physical Store,Online
+1162,Web Search,Online
+1163,Web Search,Online
+1164,Online Advertisement,Online
+1165,Web Search,Online
+1166,Physical Store,Online
+1167,Online Advertisement,Online
+1168,Friend Recommendation,Physical Store
+1169,Online Advertisement,Physical Store
+1170,Friend Recommendation,Online
+1171,Friend Recommendation,Online
+1172,Online Advertisement,Book Club
+1173,Friend Recommendation,Online
+1174,Online Advertisement,Online
+1175,Web Search,Online
+1176,Physical Store,Book Club
+1177,Web Search,Online
+1178,Friend Recommendation,Other
+1179,Physical Store,Physical Store
+1180,Web Search,Book Club
+1181,Other,Physical Store
+1182,Friend Recommendation,Online
+1183,Physical Store,Online
+1184,Friend Recommendation,Online
+1185,Friend Recommendation,Online
+1186,Friend Recommendation,Physical Store
+1187,Friend Recommendation,Physical Store
+1188,Physical Store,Online
+1189,Web Search,Online
+1190,Other,Physical Store
+1191,Web Search,Online
+1192,Friend Recommendation,Physical Store
+1193,Friend Recommendation,Online
+1194,Web Search,Physical Store
+1195,Online Advertisement,Physical Store
+1196,Other,Online
+1197,Physical Store,Online
+1198,Friend Recommendation,Online
+1199,Physical Store,Online
+1200,Web Search,Online
+1201,Physical Store,Physical Store
+1202,Web Search,Online
+1203,Online Advertisement,Book Club
+1204,Web Search,Online
+1205,Friend Recommendation,Book Club
+1206,Friend Recommendation,Online
+1207,Other,Book Club
+1208,Web Search,Online
+1209,Friend Recommendation,Online
+1210,Web Search,Online
+1211,Online Advertisement,Physical Store
+1212,Physical Store,Physical Store
+1213,Friend Recommendation,Online
+1214,Web Search,Online
+1215,Friend Recommendation,Online
+1216,Other,Online
+1217,Web Search,Online
+1218,Physical Store,Online
+1219,Friend Recommendation,Online
+1220,Physical Store,Online
+1221,Friend Recommendation,Online
+1222,Friend Recommendation,Online
+1223,Friend Recommendation,Online
+1224,Online Advertisement,Online
+1225,Friend Recommendation,Online
+1226,Friend Recommendation,Online
+1227,Physical Store,Online
+1228,Online Advertisement,Physical Store
+1229,Physical Store,Physical Store
+1230,Online Advertisement,Online
+1231,Online Advertisement,Online
+1232,Online Advertisement,Online
+1233,Friend Recommendation,Online
+1234,Physical Store,Physical Store
+1235,Friend Recommendation,Other
+1236,Web Search,Online
+1237,Web Search,Online
+1238,Other,Physical Store
+1239,Friend Recommendation,Other
+1240,Friend Recommendation,Online
+1241,Physical Store,Physical Store
+1242,Friend Recommendation,Book Club
+1243,Web Search,Book Club
+1244,Physical Store,Physical Store
+1245,Physical Store,Other
+1246,Friend Recommendation,Online
+1247,Web Search,Book Club
+1248,Physical Store,Book Club
+1249,Online Advertisement,Online
+1250,Other,Online
+1251,Physical Store,Online
+1252,Web Search,Online
+1253,Online Advertisement,Online
+1254,Web Search,Physical Store
+1255,Physical Store,Online
+1256,Other,Physical Store
+1257,Online Advertisement,Online
+1258,Online Advertisement,Physical Store
+1259,Physical Store,Online
+1260,Web Search,Online
+1261,Friend Recommendation,Online
+1262,Online Advertisement,Online
+1263,Friend Recommendation,Physical Store
+1264,Friend Recommendation,Physical Store
+1265,Web Search,Online
+1266,Web Search,Online
+1267,Friend Recommendation,Online
+1268,Online Advertisement,Online
+1269,Web Search,Online
+1270,Friend Recommendation,Online
+1271,Online Advertisement,Online
+1272,Web Search,Online
+1273,Physical Store,Online
+1274,Friend Recommendation,Online
+1275,Online Advertisement,Online
+1276,Physical Store,Physical Store
+1277,Online Advertisement,Online
+1278,Friend Recommendation,Online
+1279,Friend Recommendation,Online
+1280,Web Search,Online
+1281,Web Search,Physical Store
+1282,Web Search,Online
+1283,Friend Recommendation,Physical Store
+1284,Web Search,Online
+1285,Online Advertisement,Book Club
+1286,Friend Recommendation,Book Club
+1287,Online Advertisement,Physical Store
+1288,Online Advertisement,Book Club
+1289,Friend Recommendation,Physical Store
+1290,Physical Store,Online
+1291,Online Advertisement,Online
+1292,Web Search,Physical Store
+1293,Physical Store,Book Club
+1294,Online Advertisement,Online
+1295,Friend Recommendation,Online
+1296,Online Advertisement,Physical Store
+1297,Online Advertisement,Online
+1298,Physical Store,Physical Store
+1299,Physical Store,Book Club
+1300,Physical Store,Online
+1301,Physical Store,Online
+1302,Physical Store,Online
+1303,Web Search,Online
+1304,Physical Store,Physical Store
+1305,Web Search,Online
+1306,Web Search,Online
+1307,Web Search,Online
+1308,Friend Recommendation,Online
+1309,Online Advertisement,Physical Store
+1310,Online Advertisement,Physical Store
+1311,Web Search,Physical Store
+1312,Online Advertisement,Online
+1313,Friend Recommendation,Online
+1314,Physical Store,Online
+1315,Online Advertisement,Online
+1316,Web Search,Other
+1317,Physical Store,Book Club
+1318,Online Advertisement,Other
+1319,Web Search,Book Club
+1320,Online Advertisement,Online
+1321,Online Advertisement,Online
+1322,Friend Recommendation,Online
+1323,Friend Recommendation,Online
+1324,Online Advertisement,Physical Store
+1325,Web Search,Book Club
+1326,Online Advertisement,Online
+1327,Friend Recommendation,Physical Store
+1328,Web Search,Online
+1329,Web Search,Physical Store
+1330,Online Advertisement,Online
+1331,Online Advertisement,Online
+1332,Physical Store,Online
+1333,Friend Recommendation,Online
+1334,Physical Store,Online
+1335,Online Advertisement,Online
+1336,Friend Recommendation,Other
+1337,Friend Recommendation,Online
+1338,Friend Recommendation,Physical Store
+1339,Web Search,Physical Store
+1340,Web Search,Online
+1341,Other,Online
+1342,Web Search,Physical Store
+1343,Physical Store,Online
+1344,Physical Store,Physical Store
+1345,Friend Recommendation,Online
+1346,Physical Store,Online
+1347,Physical Store,Other
+1348,Friend Recommendation,Online
+1349,Physical Store,Online
+1350,Online Advertisement,Online
+1351,Friend Recommendation,Online
+1352,Physical Store,Online
+1353,Friend Recommendation,Online
+1354,Online Advertisement,Online
+1355,Web Search,Online
+1356,Online Advertisement,Online
+1357,Web Search,Physical Store
+1358,Online Advertisement,Online
+1359,Web Search,Book Club
+1360,Web Search,Other
+1361,Online Advertisement,Physical Store
+1362,Online Advertisement,Online
+1363,Friend Recommendation,Online
+1364,Web Search,Online
+1365,Web Search,Online
+1366,Web Search,Online
+1367,Physical Store,Book Club
+1368,Friend Recommendation,Other
+1369,Physical Store,Online
+1370,Online Advertisement,Online
+1371,Online Advertisement,Online
+1372,Online Advertisement,Physical Store
+1373,Web Search,Online
+1374,Web Search,Online
+1375,Web Search,Online
+1376,Web Search,Online
+1377,Web Search,Online
+1378,Friend Recommendation,Online
+1379,Online Advertisement,Book Club
+1380,Physical Store,Online
+1381,Online Advertisement,Online
+1382,Web Search,Online
+1383,Web Search,Online
+1384,Friend Recommendation,Online
+1385,Friend Recommendation,Book Club
+1386,Friend Recommendation,Online
+1387,Web Search,Online
+1388,Online Advertisement,Online
+1389,Friend Recommendation,Online
+1390,Friend Recommendation,Physical Store
+1391,Web Search,Physical Store
+1392,Friend Recommendation,Other
+1393,Physical Store,Online
+1394,Physical Store,Online
+1395,Physical Store,Online
+1396,Online Advertisement,Book Club
+1397,Friend Recommendation,Physical Store
+1398,Web Search,Online
+1399,Friend Recommendation,Online
+1400,Friend Recommendation,Other
+1401,Web Search,Online
+1402,Friend Recommendation,Online
+1403,Web Search,Online
+1404,Online Advertisement,Physical Store
+1405,Friend Recommendation,Online
+1406,Other,Online
+1407,Online Advertisement,Book Club
+1408,Physical Store,Online
+1409,Web Search,Online
+1410,Physical Store,Online
+1411,Web Search,Online
+1412,Online Advertisement,Online
+1413,Physical Store,Online
+1414,Friend Recommendation,Book Club
+1415,Friend Recommendation,Online
+1416,Physical Store,Physical Store
+1417,Friend Recommendation,Physical Store
+1418,Online Advertisement,Book Club
+1419,Friend Recommendation,Online
+1420,Friend Recommendation,Online
+1421,Web Search,Physical Store
+1422,Online Advertisement,Online
+1423,Other,Book Club
+1424,Friend Recommendation,Other
+1425,Friend Recommendation,Online
+1426,Friend Recommendation,Online
+1427,Physical Store,Online
+1428,Online Advertisement,Online
+1429,Physical Store,Online
+1430,Web Search,Online
+1431,Web Search,Online
+1432,Online Advertisement,Online
+1433,Web Search,Online
+1434,Physical Store,Online
+1435,Online Advertisement,Physical Store
+1436,Web Search,Online
+1437,Online Advertisement,Online
+1438,Physical Store,Physical Store
+1439,Physical Store,Book Club
+1440,Online Advertisement,Online
+1441,Friend Recommendation,Other
+1442,Online Advertisement,Other
+1443,Online Advertisement,Online
+1444,Friend Recommendation,Online
+1445,Web Search,Book Club
+1446,Friend Recommendation,Online
+1447,Friend Recommendation,Online
+1448,Friend Recommendation,Online
+1449,Physical Store,Online
+1450,Friend Recommendation,Physical Store
+1451,Web Search,Online
+1452,Physical Store,Online
+1453,Friend Recommendation,Online
+1454,Other,Physical Store
+1455,Physical Store,Online
+1456,Friend Recommendation,Physical Store
+1457,Friend Recommendation,Online
+1458,Physical Store,Physical Store
+1459,Friend Recommendation,Book Club
+1460,Web Search,Online
+1461,Physical Store,Online
+1462,Online Advertisement,Online
+1463,Web Search,Other
+1464,Web Search,Online
+1465,Friend Recommendation,Book Club
+1466,Online Advertisement,Online
+1467,Web Search,Other
+1468,Friend Recommendation,Online
+1469,Online Advertisement,Online
+1470,Online Advertisement,Online
+1471,Physical Store,Physical Store
+1472,Web Search,Physical Store
+1473,Online Advertisement,Online
+1474,Friend Recommendation,Online
+1475,Online Advertisement,Physical Store
+1476,Online Advertisement,Online
+1477,Friend Recommendation,Online
+1478,Web Search,Book Club
+1479,Online Advertisement,Online
+1480,Physical Store,Online
+1481,Web Search,Physical Store
+1482,Web Search,Online
+1483,Web Search,Online
+1484,Web Search,Physical Store
+1485,Online Advertisement,Online
+1486,Online Advertisement,Online
+1487,Online Advertisement,Online
+1488,Web Search,Online
+1489,Physical Store,Online
+1490,Friend Recommendation,Book Club
+1491,Web Search,Online
+1492,Web Search,Online
+1493,Online Advertisement,Online
+1494,Online Advertisement,Online
+1495,Friend Recommendation,Online
+1496,Physical Store,Online
+1497,Friend Recommendation,Online
+1498,Physical Store,Online
+1499,Friend Recommendation,Online
+1500,Other,Physical Store
+1501,Online Advertisement,Online
+1502,Physical Store,Online
+1503,Friend Recommendation,Online
+1504,Online Advertisement,Book Club
+1505,Friend Recommendation,Online
+1506,Online Advertisement,Physical Store
+1507,Online Advertisement,Book Club
+1508,Physical Store,Online
+1509,Web Search,Physical Store
+1510,Web Search,Online
+1511,Physical Store,Physical Store
+1512,Web Search,Online
+1513,Other,Online
+1514,Other,Online
+1515,Web Search,Physical Store
+1516,Web Search,Physical Store
+1517,Physical Store,Online
+1518,Physical Store,Online
+1519,Friend Recommendation,Book Club
+1520,Friend Recommendation,Online
+1521,Friend Recommendation,Book Club
+1522,Friend Recommendation,Online
+1523,Online Advertisement,Online
+1524,Physical Store,Online
+1525,Online Advertisement,Book Club
+1526,Physical Store,Online
+1527,Online Advertisement,Book Club
+1528,Web Search,Online
+1529,Physical Store,Online
+1530,Physical Store,Online
+1531,Online Advertisement,Physical Store
+1532,Friend Recommendation,Online
+1533,Friend Recommendation,Physical Store
+1534,Physical Store,Online
+1535,Physical Store,Online
+1536,Physical Store,Online
+1537,Friend Recommendation,Physical Store
+1538,Online Advertisement,Physical Store
+1539,Physical Store,Physical Store
+1540,Physical Store,Online
+1541,Physical Store,Physical Store
+1542,Web Search,Other
+1543,Friend Recommendation,Physical Store
+1544,Online Advertisement,Online
+1545,Physical Store,Book Club
+1546,Physical Store,Online
+1547,Physical Store,Online
+1548,Online Advertisement,Online
+1549,Web Search,Book Club
+1550,Friend Recommendation,Physical Store
+1551,Online Advertisement,Online
+1552,Friend Recommendation,Online
+1553,Online Advertisement,Book Club
+1554,Online Advertisement,Book Club
+1555,Friend Recommendation,Online
+1556,Friend Recommendation,Online
+1557,Friend Recommendation,Online
+1558,Online Advertisement,Online
+1559,Web Search,Online
+1560,Web Search,Online
+1561,Friend Recommendation,Online
+1562,Online Advertisement,Other
+1563,Web Search,Online
+1564,Physical Store,Online
+1565,Web Search,Online
+1566,Web Search,Book Club
+1567,Other,Online
+1568,Friend Recommendation,Online
+1569,Friend Recommendation,Online
+1570,Friend Recommendation,Online
+1571,Web Search,Physical Store
+1572,Physical Store,Online
+1573,Web Search,Physical Store
+1574,Friend Recommendation,Book Club
+1575,Web Search,Online
+1576,Friend Recommendation,Physical Store
+1577,Physical Store,Online
+1578,Friend Recommendation,Online
+1579,Web Search,Online
+1580,Web Search,Book Club
+1581,Friend Recommendation,Online
+1582,Other,Online
+1583,Friend Recommendation,Physical Store
+1584,Online Advertisement,Online
+1585,Friend Recommendation,Online
+1586,Web Search,Online
+1587,Online Advertisement,Online
+1588,Online Advertisement,Book Club
+1589,Web Search,Online
+1590,Web Search,Book Club
+1591,Online Advertisement,Other
+1592,Other,Book Club
+1593,Web Search,Online
+1594,Web Search,Physical Store
+1595,Friend Recommendation,Physical Store
+1596,Physical Store,Online
+1597,Online Advertisement,Physical Store
+1598,Physical Store,Other
+1599,Online Advertisement,Book Club
+1600,Friend Recommendation,Physical Store
+1601,Web Search,Physical Store
+1602,Web Search,Online
+1603,Online Advertisement,Online
+1604,Friend Recommendation,Other
+1605,Friend Recommendation,Online
+1606,Web Search,Online
+1607,Friend Recommendation,Physical Store
+1608,Friend Recommendation,Online
+1609,Web Search,Book Club
+1610,Online Advertisement,Online
+1611,Web Search,Online
+1612,Physical Store,Online
+1613,Other,Physical Store
+1614,Other,Online
+1615,Friend Recommendation,Online
+1616,Online Advertisement,Physical Store
+1617,Online Advertisement,Physical Store
+1618,Friend Recommendation,Physical Store
+1619,Friend Recommendation,Other
+1620,Friend Recommendation,Physical Store
+1621,Other,Online
+1622,Physical Store,Online
+1623,Other,Physical Store
+1624,Friend Recommendation,Online
+1625,Online Advertisement,Online
+1626,Online Advertisement,Book Club
+1627,Web Search,Online
+1628,Friend Recommendation,Online
+1629,Web Search,Online
+1630,Online Advertisement,Online
+1631,Friend Recommendation,Online
+1632,Physical Store,Book Club
+1633,Online Advertisement,Physical Store
+1634,Friend Recommendation,Online
+1635,Friend Recommendation,Online
+1636,Web Search,Online
+1637,Friend Recommendation,Physical Store
+1638,Online Advertisement,Online
+1639,Friend Recommendation,Online
+1640,Web Search,Physical Store
+1641,Physical Store,Online
+1642,Friend Recommendation,Online
+1643,Online Advertisement,Online
+1644,Friend Recommendation,Online
+1645,Web Search,Online
+1646,Web Search,Book Club
+1647,Physical Store,Other
+1648,Web Search,Book Club
+1649,Physical Store,Online
+1650,Web Search,Book Club
+1651,Physical Store,Online
+1652,Web Search,Other
+1653,Physical Store,Physical Store
+1654,Web Search,Physical Store
+1655,Friend Recommendation,Physical Store
+1656,Online Advertisement,Online
+1657,Physical Store,Online
+1658,Physical Store,Physical Store
+1659,Online Advertisement,Physical Store
+1660,Friend Recommendation,Online
+1661,Web Search,Online
+1662,Friend Recommendation,Online
+1663,Friend Recommendation,Online
+1664,Friend Recommendation,Online
+1665,Online Advertisement,Book Club
+1666,Web Search,Online
+1667,Web Search,Online
+1668,Physical Store,Physical Store
+1669,Web Search,Physical Store
+1670,Web Search,Online
+1671,Online Advertisement,Online
+1672,Other,Online
+1673,Friend Recommendation,Book Club
+1674,Friend Recommendation,Other
+1675,Friend Recommendation,Physical Store
+1676,Web Search,Physical Store
+1677,Other,Physical Store
+1678,Online Advertisement,Online
+1679,Web Search,Online
+1680,Online Advertisement,Online
+1681,Web Search,Online
+1682,Web Search,Online
+1683,Friend Recommendation,Other
+1684,Other,Physical Store
+1685,Online Advertisement,Online
+1686,Web Search,Online
+1687,Web Search,Other
+1688,Physical Store,Online
+1689,Online Advertisement,Online
+1690,Friend Recommendation,Online
+1691,Web Search,Physical Store
+1692,Web Search,Online
+1693,Online Advertisement,Book Club
+1694,Web Search,Online
+1695,Friend Recommendation,Physical Store
+1696,Physical Store,Online
+1697,Friend Recommendation,Online
+1698,Web Search,Physical Store
+1699,Friend Recommendation,Other
+1700,Friend Recommendation,Book Club
+1701,Online Advertisement,Physical Store
+1702,Friend Recommendation,Physical Store
+1703,Online Advertisement,Online
+1704,Physical Store,Online
+1705,Web Search,Online
+1706,Web Search,Other
+1707,Friend Recommendation,Physical Store
+1708,Physical Store,Online
+1709,Physical Store,Online
+1710,Online Advertisement,Online
+1711,Web Search,Online
+1712,Friend Recommendation,Online
+1713,Web Search,Online
+1714,Web Search,Book Club
+1715,Web Search,Physical Store
+1716,Friend Recommendation,Online
+1717,Physical Store,Physical Store
+1718,Physical Store,Book Club
+1719,Web Search,Online
+1720,Web Search,Online
+1721,Physical Store,Online
+1722,Friend Recommendation,Online
+1723,Friend Recommendation,Physical Store
+1724,Web Search,Online
+1725,Web Search,Physical Store
+1726,Friend Recommendation,Online
+1727,Other,Online
+1728,Friend Recommendation,Online
+1729,Physical Store,Online
+1730,Other,Book Club
+1731,Friend Recommendation,Online
+1732,Web Search,Online
+1733,Friend Recommendation,Online
+1734,Physical Store,Online
+1735,Friend Recommendation,Online
+1736,Friend Recommendation,Other
+1737,Web Search,Book Club
+1738,Friend Recommendation,Online
+1739,Friend Recommendation,Book Club
+1740,Friend Recommendation,Online
+1741,Physical Store,Online
+1742,Physical Store,Online
+1743,Web Search,Book Club
+1744,Web Search,Physical Store
+1745,Physical Store,Other
+1746,Friend Recommendation,Online
+1747,Physical Store,Other
+1748,Web Search,Online
+1749,Online Advertisement,Online
+1750,Web Search,Book Club
+1751,Friend Recommendation,Online
+1752,Online Advertisement,Book Club
+1753,Web Search,Online
+1754,Friend Recommendation,Online
+1755,Web Search,Online
+1756,Web Search,Online
+1757,Friend Recommendation,Other
+1758,Other,Online
+1759,Web Search,Online
+1760,Web Search,Other
+1761,Physical Store,Physical Store
+1762,Physical Store,Online
+1763,Physical Store,Online
+1764,Online Advertisement,Online
+1765,Friend Recommendation,Physical Store
+1766,Friend Recommendation,Online
+1767,Online Advertisement,Physical Store
+1768,Physical Store,Online
+1769,Physical Store,Physical Store
+1770,Online Advertisement,Online
+1771,Friend Recommendation,Book Club
+1772,Physical Store,Online
+1773,Friend Recommendation,Online
+1774,Web Search,Online
+1775,Web Search,Online
+1776,Friend Recommendation,Book Club
+1777,Physical Store,Online
+1778,Friend Recommendation,Online
+1779,Online Advertisement,Online
+1780,Physical Store,Physical Store
+1781,Online Advertisement,Physical Store
+1782,Online Advertisement,Physical Store
+1783,Online Advertisement,Physical Store
+1784,Web Search,Online
+1785,Friend Recommendation,Online
+1786,Physical Store,Physical Store
+1787,Physical Store,Online
+1788,Online Advertisement,Physical Store
+1789,Online Advertisement,Physical Store
+1790,Physical Store,Online
+1791,Online Advertisement,Online
+1792,Friend Recommendation,Online
+1793,Web Search,Online
+1794,Friend Recommendation,Book Club
+1795,Friend Recommendation,Online
+1796,Online Advertisement,Book Club
+1797,Physical Store,Book Club
+1798,Friend Recommendation,Online
+1799,Web Search,Online
+1800,Web Search,Online
+1801,Online Advertisement,Online
+1802,Online Advertisement,Online
+1803,Friend Recommendation,Physical Store
+1804,Friend Recommendation,Physical Store
+1805,Friend Recommendation,Online
+1806,Friend Recommendation,Online
+1807,Web Search,Online
+1808,Physical Store,Physical Store
+1809,Web Search,Online
+1810,Other,Online
+1811,Web Search,Book Club
+1812,Physical Store,Online
+1813,Physical Store,Online
+1814,Web Search,Online
+1815,Web Search,Online
+1816,Web Search,Online
+1817,Friend Recommendation,Physical Store
+1818,Web Search,Online
+1819,Physical Store,Online
+1820,Web Search,Online
+1821,Web Search,Physical Store
+1822,Web Search,Physical Store
+1823,Friend Recommendation,Physical Store
+1824,Web Search,Online
+1825,Online Advertisement,Online
+1826,Web Search,Physical Store
+1827,Friend Recommendation,Online
+1828,Friend Recommendation,Physical Store
+1829,Online Advertisement,Online
+1830,Physical Store,Online
+1831,Friend Recommendation,Online
+1832,Online Advertisement,Online
+1833,Web Search,Online
+1834,Physical Store,Online
+1835,Other,Online
+1836,Web Search,Physical Store
+1837,Web Search,Online
+1838,Web Search,Online
+1839,Physical Store,Physical Store
+1840,Friend Recommendation,Physical Store
+1841,Physical Store,Online
+1842,Online Advertisement,Online
+1843,Online Advertisement,Online
+1844,Web Search,Online
+1845,Web Search,Online
+1846,Friend Recommendation,Physical Store
+1847,Online Advertisement,Physical Store
+1848,Physical Store,Online
+1849,Online Advertisement,Online
+1850,Friend Recommendation,Online
+1851,Online Advertisement,Physical Store
+1852,Physical Store,Other
+1853,Other,Online
+1854,Friend Recommendation,Online
+1855,Web Search,Online
+1856,Online Advertisement,Online
+1857,Friend Recommendation,Physical Store
+1858,Web Search,Online
+1859,Physical Store,Online
+1860,Web Search,Online
+1861,Physical Store,Online
+1862,Online Advertisement,Online
+1863,Friend Recommendation,Online
+1864,Web Search,Physical Store
+1865,Physical Store,Online
+1866,Physical Store,Physical Store
+1867,Friend Recommendation,Physical Store
+1868,Physical Store,Online
+1869,Online Advertisement,Online
+1870,Online Advertisement,Online
+1871,Physical Store,Online
+1872,Physical Store,Physical Store
+1873,Other,Online
+1874,Friend Recommendation,Online
+1875,Friend Recommendation,Online
+1876,Friend Recommendation,Online
+1877,Web Search,Online
+1878,Web Search,Book Club
+1879,Web Search,Online
+1880,Web Search,Physical Store
+1881,Physical Store,Online
+1882,Web Search,Online
+1883,Friend Recommendation,Physical Store
+1884,Friend Recommendation,Physical Store
+1885,Online Advertisement,Book Club
+1886,Friend Recommendation,Online
+1887,Friend Recommendation,Online
+1888,Online Advertisement,Online
+1889,Friend Recommendation,Online
+1890,Friend Recommendation,Physical Store
+1891,Web Search,Online
+1892,Web Search,Physical Store
+1893,Web Search,Book Club
+1894,Web Search,Online
+1895,Web Search,Online
+1896,Friend Recommendation,Online
+1897,Online Advertisement,Online
+1898,Web Search,Physical Store
+1899,Online Advertisement,Online
+1900,Friend Recommendation,Online
+1901,Web Search,Online
+1902,Friend Recommendation,Physical Store
+1903,Web Search,Physical Store
+1904,Physical Store,Physical Store
+1905,Friend Recommendation,Other
+1906,Physical Store,Online
+1907,Online Advertisement,Online
+1908,Web Search,Physical Store
+1909,Friend Recommendation,Online
+1910,Other,Online
+1911,Friend Recommendation,Online
+1912,Friend Recommendation,Other
+1913,Friend Recommendation,Online
+1914,Friend Recommendation,Online
+1915,Friend Recommendation,Online
+1916,Physical Store,Online
+1917,Friend Recommendation,Online
+1918,Online Advertisement,Online
+1919,Physical Store,Online
+1920,Web Search,Online
+1921,Friend Recommendation,Other
+1922,Friend Recommendation,Physical Store
+1923,Web Search,Online
+1924,Friend Recommendation,Physical Store
+1925,Friend Recommendation,Online
+1926,Friend Recommendation,Online
+1927,Friend Recommendation,Physical Store
+1928,Web Search,Physical Store
+1929,Other,Online
+1930,Online Advertisement,Online
+1931,Online Advertisement,Book Club
+1932,Friend Recommendation,Online
+1933,Online Advertisement,Online
+1934,Friend Recommendation,Physical Store
+1935,Online Advertisement,Physical Store
+1936,Web Search,Book Club
+1937,Friend Recommendation,Online
+1938,Web Search,Online
+1939,Friend Recommendation,Online
+1940,Friend Recommendation,Online
+1941,Web Search,Physical Store
+1942,Online Advertisement,Physical Store
+1943,Web Search,Online
+1944,Other,Online
+1945,Physical Store,Online
+1946,Online Advertisement,Physical Store
+1947,Physical Store,Online
+1948,Online Advertisement,Online
+1949,Web Search,Book Club
+1950,Physical Store,Online
+1951,Online Advertisement,Online
+1952,Physical Store,Physical Store
+1953,Web Search,Physical Store
+1954,Web Search,Online
+1955,Friend Recommendation,Online
+1956,Online Advertisement,Online
+1957,Physical Store,Online
+1958,Web Search,Online
+1959,Online Advertisement,Other
+1960,Web Search,Online
+1961,Online Advertisement,Online
+1962,Friend Recommendation,Online
+1963,Other,Online
+1964,Friend Recommendation,Online
+1965,Online Advertisement,Online
+1966,Physical Store,Online
+1967,Physical Store,Online
+1968,Friend Recommendation,Online
+1969,Physical Store,Online
+1970,Web Search,Physical Store
+1971,Friend Recommendation,Online
+1972,Web Search,Online
+1973,Online Advertisement,Book Club
+1974,Online Advertisement,Book Club
+1975,Friend Recommendation,Online
+1976,Web Search,Online
+1977,Physical Store,Online
+1978,Web Search,Physical Store
+1979,Physical Store,Other
+1980,Online Advertisement,Book Club
+1981,Friend Recommendation,Online
+1982,Friend Recommendation,Online
+1983,Other,Book Club
+1984,Friend Recommendation,Physical Store
+1985,Web Search,Online
+1986,Physical Store,Online
+1987,Physical Store,Online
+1988,Friend Recommendation,Physical Store
+1989,Web Search,Online
+1990,Online Advertisement,Book Club
+1991,Web Search,Online
+1992,Web Search,Online
+1993,Friend Recommendation,Online
+1994,Online Advertisement,Physical Store
+1995,Web Search,Online
+1996,Friend Recommendation,Book Club
+1997,Physical Store,Physical Store
+1998,Friend Recommendation,Online
+1999,Physical Store,Online
