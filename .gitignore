@@ -185,3 +185,6 @@ Dissertation/independent_model_testing/bert_tuning/bert_sentiment_analysis/trial
 Dissertation/independent_model_testing/bert_tuning/bert_sentiment_analysis/trial_4/trial.json
 Dissertation/independent_model_testing/bert_tuning/BERT_Hyperparameter_Tuning/oracle.json
 Dissertation/independent_model_testing/bert_tuning/BERT_Hyperparameter_Tuning/trial_0/trial.json
+Dissertation/models/__pycache__/basemodelclass.cpython-39.pyc
+Dissertation/models/__pycache__/logstic_regression.cpython-39.pyc
+Dissertation/prototype/__pycache__/XGBoost.cpython-39.pyc

@@ -1,29 +1,46 @@
+
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import os
 
+import matplotlib.pyplot as plt
+import numpy as np
+import re
+import pandas as pd
+import numpy as np
+import multiprocessing
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+import dask.dataframe as dd
+import joblib
+
 class TextPreprocessor:
     # Example usage:
-    PATH_TRAIN_DATA = os.path.join(os.path.dirname(__file__), 'InputData', 'train.csv')
-    PATH_TEST_DATA = os.path.join(os.path.dirname(__file__), 'InputData', 'test.csv')
-    DATA_SET_HEADER = ['polarity', 'title', 'review']
-    def __init__(self, max_features=5000, max_length = 100):
+    _stop_words = set(stopwords.words('english'))
+    def __init__(self, max_features=3000, max_length = 100, input_dir = 'InputData', data_set_header = ['polarity', 'title', 'review']):
         """
         Constructor to initialize paths, column headers, and TF-IDF settings.
         
         :param max_features: [Maximum number of words in the vocabulary] or [Maximum number of words to use for TF-IDF vectorization]
         :param max_length: Maximum length of the input sequences
         """
+        self.PATH_TRAIN_DATA = os.path.join(input_dir, 'train.csv')
+        self.PATH_TEST_DATA = os.path.join(input_dir, 'test.csv')
+        self.PATH_TRAIN_CLEANED_DATA=os.path.join(input_dir, 'train_cleaned.csv')
+        self.PATH_TEST_CLEANED_DATA=os.path.join(input_dir, 'test_cleaned.csv')
+        self.DATA_SET_HEADER = data_set_header
         self.max_features = max_features
-        self.max_length=max_length
+        self.max_length = max_length
         self.vectorizer = TfidfVectorizer(max_features=self.max_features)
 
-    def filter_by_length_of_sentence(self, X_train, percent=70):
-        X_train['review_length'] = X_train['review'].apply(len)
-        
-        length_counts = X_train['review_length'].value_counts().reset_index()
+    def filter_by_length_of_sentence(self, df, percent=70):
+        df['review_length'] = df['review'].apply(len)
+        print('before filter')
+        self.get_plot(df, show_percent=True)
+
+        length_counts = df['review_length'].value_counts().reset_index()
         length_counts.columns = ['review_length', 'count']
         length_counts = length_counts.sort_values('review_length')
         
@@ -31,9 +48,13 @@ class TextPreprocessor:
         length_counts['cumulative_percentage'] = 100 * length_counts['cumulative_sum'] / length_counts['count'].sum()
         
         threshold = length_counts[length_counts['cumulative_percentage'] >= percent].iloc[0]['review_length']
-        self.max_length = threshold+1
-        filtered_data = X_train[X_train['review_length'] <= threshold]
+        self.max_length = int(threshold+1)
+        print(f'Max length: {self.max_length}')
+        filtered_data = df[df['review_length'] <= threshold]
         
+        print('after filter')
+        self.get_plot(filtered_data, show_percent=False)
+
         return filtered_data
     
     def limit_length_of_sentence(self, X_train, max_length):
@@ -92,7 +113,34 @@ class TextPreprocessor:
 
         return df_train, df_test
 
-    def preprocess(self, df):
+    def parallel_load_data(self, num_sample=0, test_ratio=0.2):
+        """
+        Load training and test datasets.
+        
+        :return: Loaded DataFrames for train and test datasets
+        """
+        df_train = dd.read_csv(self.PATH_TRAIN_DATA, names=self.DATA_SET_HEADER)
+        df_test = dd.read_csv(self.PATH_TEST_DATA, names=self.DATA_SET_HEADER)
+
+        df_train = df_train.compute()
+        df_test = df_test.compute()
+
+        # df_train = pd.read_csv(self.PATH_TRAIN_DATA, names=self.DATA_SET_HEADER)
+        # # df_train = self.filter_by_length_of_sentence(df_train)
+
+        # df_test = pd.read_csv(self.PATH_TEST_DATA, names=self.DATA_SET_HEADER)
+        if num_sample == 0:
+            pass
+        else:
+            df_train = self.sampling_data(df_train, num_sample=num_sample)
+            df_test = self.sampling_data(df_test, num_sample=int(num_sample*test_ratio))
+
+        df_train = df_train.dropna()
+        df_test = df_test.dropna()
+
+        return df_train, df_test
+    
+    def map_polarity(self, df):
         """
         Preprocess the dataset by converting polarity to binary labels.
         
@@ -144,3 +192,83 @@ class TextPreprocessor:
         X_train_pad = pad_sequences(X_train_seq, maxlen=self.max_length)
         X_test_pad = pad_sequences(X_test_seq, maxlen=self.max_length)
         return X_train_pad, X_test_pad
+    
+    def _expand_contractions(self, review):
+        contractions = {
+            "don't": "do not", "I'm": "I am", "you're": "you are", "it's": "it is",
+            "he's": "he is", "she's": "she is", "we're": "we are", "they're": "they are",
+            "I've": "I have", "you've": "you have", "we've": "we have", "they've": "they have",
+            "isn't": "is not", "aren't": "are not", "wasn't": "was not", "weren't": "were not",
+            "haven't": "have not", "hasn't": "has not", "hadn't": "had not",
+            "won't": "will not", "wouldn't": "would not", "can't": "cannot", "couldn't": "could not",
+            "shouldn't": "should not", "mightn't": "might not", "mustn't": "must not"
+        }
+        
+        contractions_re = re.compile('(%s)' % '|'.join(contractions.keys()))
+        
+        def replace(match):
+            return contractions[match.group(0)]
+    
+        return contractions_re.sub(replace, review)
+
+    def _remove_stopwords(self, review):
+        review = self._expand_contractions(review)
+        
+        word_tokens = word_tokenize(review)
+        
+        filtered_review = [re.sub(r'\W+$', '', word.lower()) for word in word_tokens if word.lower() not in self._stop_words]
+        
+        filtered_review = ' '.join(filtered_review).strip()
+        filtered_review = re.sub(' +', ' ', filtered_review) 
+        
+        return filtered_review
+
+    def _process_reviews_chunk(self, reviews_chunk):
+        return reviews_chunk.apply(self._remove_stopwords)
+    
+    def remove_stopwords(self, df, col_name='review'):
+        num_cores = multiprocessing.cpu_count() 
+        pool = multiprocessing.Pool(num_cores)   
+
+        review_chunks = np.array_split(df[col_name], num_cores)
+        processed_chunks = pool.map(self._process_reviews_chunk, review_chunks)
+
+        df[col_name] = pd.concat(processed_chunks)
+        
+        pool.close()
+        pool.join()
+
+        return df
+    
+    def count_sentence_words_count(self, df, col_name='review'):
+        df[f'{col_name}_length'] = df[col_name].apply(lambda x: len(x.split()))
+        return df
+    
+    def get_plot(self, df,col_name='review_length', show_percent=True):
+        review_length_counts = df[col_name].value_counts().sort_index()
+
+        cumulative_percentage = np.cumsum(review_length_counts.values) / np.sum(review_length_counts.values) * 100
+
+        plt.figure(figsize=(20, 6))
+        plt.bar(review_length_counts.index, review_length_counts.values, color='skyblue')
+        if show_percent:
+            length_50_percent = review_length_counts.index[np.argmax(cumulative_percentage >= 50)]
+            length_70_percent = review_length_counts.index[np.argmax(cumulative_percentage >= 70)]
+            length_80_percent = review_length_counts.index[np.argmax(cumulative_percentage >= 80)]
+            plt.axvline(x=length_50_percent, color='blue', linestyle='--', label=f'50% at {length_50_percent} words')
+            plt.axvline(x=length_70_percent, color='red', linestyle='--', label=f'70% at {length_70_percent} words')
+            plt.axvline(x=length_80_percent, color='green', linestyle='--', label=f'80% at {length_80_percent} words')
+            print('Words count - 50%: ',length_50_percent)
+            print('Words count - 70%: ',length_70_percent)
+            print('Words count - 80%: ',length_80_percent)
+        else:
+            pass
+        plt.xlabel('Review Length (Number of Words)', fontsize=12)
+        plt.ylabel('Number of Reviews', fontsize=12)
+        plt.title('Distribution of Review Lengths in Dataframe', fontsize=14)
+        plt.grid(True, axis='y', linestyle='--', alpha=0.7)
+        plt.legend()
+        plt.show()
+
+
+
