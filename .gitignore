@@ -187,4 +187,11 @@ Dissertation/independent_model_testing/bert_tuning/BERT_Hyperparameter_Tuning/or
 Dissertation/independent_model_testing/bert_tuning/BERT_Hyperparameter_Tuning/trial_0/trial.json
 Dissertation/models/__pycache__/basemodelclass.cpython-39.pyc
 Dissertation/models/__pycache__/logstic_regression.cpython-39.pyc
-Dissertation/prototype/__pycache__/XGBoost.cpython-39.pyc
+Dissertation/prototype/__pycache__/
+Dissertation/models/__pycache__
+Dissertation/models/__pycache__/naive_bayes.cpython-39.pyc
+Dissertation/models/__pycache__/rnn.cpython-39.pyc
+Dissertation/models/__pycache__/XGBoost.cpython-39.pyc
+Dissertation/models/__pycache__/
+Dissertation/models/__pycache__/XGBoost.cpython-39.pyc
+Dissertation/models/__pycache__/XGBoost.cpython-39.pyc

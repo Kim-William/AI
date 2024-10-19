@@ -4,6 +4,7 @@ import xgboost as xgb
 from dask_ml.model_selection import RandomizedSearchCV
 from dask_ml.model_selection import GridSearchCV
 import numpy as np
+import pickle
 
 from models.basemodelclass import BaseModelClass
 class XGBoost(BaseModelClass):
@@ -43,19 +44,16 @@ class XGBoost(BaseModelClass):
         start_time = time.time()
         self.model = xgb.train(params, d_matrix, num_boost_round=100)
         self.training_time = time.time() - start_time
-
-        return self.model
     
     def train_best_model(self, data, y, best_params):
         d_matrix = self.convert_to_dmatrix(data, y)
+        self.best_params = best_params
         # Train the model using GPU
         self.best_model = self._build_best_model(best_params)
         start_time = time.time()
         self.best_model = xgb.train(best_params, d_matrix, num_boost_round=100)
         # self.best_model.fit(data,y)
         self.best_training_time = time.time() - start_time
-
-        return self.best_model
     
     def random_search(self, data, y, n_iter, cv, verbos, random_state, n_jobs):
         model = xgb.XGBClassifier(tree_method='gpu_hist', use_label_encoder=False, eval_metric='logloss', verbosity=verbos)
@@ -89,7 +87,7 @@ class XGBoost(BaseModelClass):
 
         print(f"Best parameters found: {self.random_search_cv.best_params_}")
 
-    def grid_search(self, data, y, cv, verbos, n_jobs, best_params=None):
+    def grid_search(self, data, y,best_params, cv, verbos, n_jobs):
         # Initialize the XGBoost classifier with base settings
         model = xgb.XGBClassifier(
             tree_method='gpu_hist',  # Use GPU for histogram optimization
@@ -138,3 +136,6 @@ class XGBoost(BaseModelClass):
         self.grid_search_time = time.time() - start_time
         # Print the best parameters and model
         print(f"Best parameters found by GridSearchCV: {self.grid_search_cv.best_params_}")
+
+    def save_model_and_params(self, model_filename, best_model_filename, params_filename):
+        super().save_model_and_params(model_filename, best_model_filename, params_filename)
