@@ -8,7 +8,7 @@ from sklearn.model_selection import RandomizedSearchCV, GridSearchCV
 from tensorflow.keras.callbacks import EarlyStopping
 import pickle
 
-from models.basemodelclass import BaseModelClass
+from basemodelclass import BaseModelClass
 class RNN(BaseModelClass):
     def __init__(self, max_feature = 5000, max_length = 100, epochs=15, batch_size=64, output_dim = 128, optimizer = 'adam', embedding_dim = 32, rnn_unit=64, verbose=0):
         super().__init__(model_name = 'RNN')
@@ -97,13 +97,14 @@ class RNN(BaseModelClass):
 
     def random_search(self, data, y, validation_data=None, n_iter=200, cv=3, random_state=42, n_jobs=-1, patience=3):
         model = self._build_model(patience=patience)
+        origin_param_dist = self.model.get_params()
 
         param_dist = {
-            'rnn_units': [16, 32, 64],
-            'embedding_dim': [32, 64, 128],
-            'optimizer': ['adam', 'rmsprop'],
-            'epochs': [5, 10],
-            'batch_size': [16, 32, 64, 128]
+            'rnn_units': [16, 32, 64, origin_param_dist['rnn_units']],
+            'embedding_dim': [32, 64, 128, origin_param_dist['embedding_dim']],
+            'optimizer': ['adam', 'rmsprop', origin_param_dist['optimizer']],
+            'epochs': [origin_param_dist['epochs']-3, origin_param_dist['epochs'], origin_param_dist['epochs']+3, origin_param_dist['epochs']+10],
+            'batch_size': [16, 32, 64, 128, origin_param_dist['epochs']]
         }
 
         self.random_search_cv = RandomizedSearchCV(
@@ -128,17 +129,20 @@ class RNN(BaseModelClass):
     def grid_search(self, data, y, validation_data, best_params, cv=3, n_jobs=-1, patience=3):
         model = self._build_model(patience=patience)
 
+        rnn_units = best_params['rnn_units'] if best_params['rnn_units'] is not None else 1
+        embedding_dim = best_params['embedding_dim'] if best_params['embedding_dim'] is not None else 1
+
         param_dist = {
-            'rnn_units': [int(best_params['rnn_units']*0.9), best_params['rnn_units'], int(best_params['rnn_units']*1.1)],     
-            'embedding_dim': [int(best_params['embedding_dim']*0.9),best_params['embedding_dim'], int(best_params['embedding_dim']*1.1)],      
-            'optimizer': [best_params['optimizer']], 
-            'epochs': [best_params['epochs']],                
-            'batch_size': [best_params['batch_size']]   
-            # 'rnn_units': [int(best_params['rnn_units']*0.9),int(best_params['rnn_units']*0.95), best_params['rnn_units'], int(best_params['rnn_units']*1.05), int(best_params['rnn_units']*1.1)],     
-            # 'embedding_dim': [int(best_params['embedding_dim']*0.9),int(best_params['embedding_dim']*0.95),best_params['embedding_dim'], int(best_params['embedding_dim']*1.05), int(best_params['embedding_dim']*1.1)],      
+            # 'rnn_units': [int(best_params['rnn_units']*0.9), best_params['rnn_units'], int(best_params['rnn_units']*1.1)],     
+            # 'embedding_dim': [int(best_params['embedding_dim']*0.9),best_params['embedding_dim'], int(best_params['embedding_dim']*1.1)],      
             # 'optimizer': [best_params['optimizer']], 
             # 'epochs': [best_params['epochs']],                
-            # 'batch_size': [best_params['batch_size']]          
+            # 'batch_size': [best_params['batch_size']]   
+            'rnn_units': [int(rnn_units*0.9),int(rnn_units*0.95), rnn_units, int(rnn_units*1.05), int(rnn_units*1.1)],     
+            'embedding_dim': [int(embedding_dim*0.9),int(embedding_dim*0.95),embedding_dim, int(embedding_dim*1.05), int(embedding_dim*1.1)],      
+            'optimizer': [best_params['optimizer']], 
+            'epochs': [best_params['epochs']],                
+            'batch_size': [best_params['batch_size']]          
         }
 
         self.grid_search_cv = GridSearchCV(

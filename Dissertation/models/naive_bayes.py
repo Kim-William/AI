@@ -4,11 +4,12 @@ import time
 from sklearn.model_selection import RandomizedSearchCV, GridSearchCV
 import numpy as np
 
-from models.basemodelclass import BaseModelClass
+from basemodelclass import BaseModelClass
 class Naive_Bayes(BaseModelClass):
-    def __init__(self):
+    def __init__(self, verbose=1):
         super().__init__(model_name = 'Naive_Bayes')
-    
+        self.verbose = verbose
+
     def _build_model(self):
         print('Not used method! Use train_model() instead this method.')
 
@@ -29,12 +30,13 @@ class Naive_Bayes(BaseModelClass):
         self.best_model.fit(data, y)
         self.best_training_time = time.time()-start_time
 
-    def random_search(self, data, y, n_iter, cv, verbos, random_state, n_jobs):
+    def random_search(self, data, y, n_iter, cv, random_state, n_jobs):
+        origin_param_dist = self.model.get_params()
         # Define the initial parameter grid for RandomizedSearchCV
         param_dist = {
             # 'alpha': np.linspace(0.01, 1, 50),  # Smoothing parameter; commonly tuned in Naive Bayes
             # 'fit_prior': [True, False]  # Whether to learn class prior probabilities or not
-            'alpha': np.linspace(0.001, 1, 2000),  # Smoothing parameter; commonly tuned in Naive Bayes
+            'alpha': np.append(np.linspace(0.001, 1, 2000), origin_param_dist['alpha']),  # Smoothing parameter; commonly tuned in Naive Bayes
             'fit_prior': [True, False]  # Whether to learn class prior probabilities or not
         }
 
@@ -46,7 +48,7 @@ class Naive_Bayes(BaseModelClass):
             scoring='accuracy', 
             cv=cv,  # fold cross-validation
             random_state=random_state,
-            verbose=verbos,
+            verbose=self.verbose,
             n_jobs=n_jobs  # Use all available CPU cores
         )
 
@@ -56,9 +58,11 @@ class Naive_Bayes(BaseModelClass):
         self.random_search_time = time.time() - start_time
         print(f"Best parameters from RandomizedSearchCV: {self.random_search_cv.best_params_}")
 
-    def grid_search(self, data, y, best_params, cv, verbos, n_jobs):
+    def grid_search(self, data, y, best_params, cv, n_jobs):
+
+        alpha = best_params['alpha'] if best_params['alpha'] is not None else 2
         param_grid = {
-            'alpha': np.linspace(best_params['alpha'] - 1, best_params['alpha'] + 1.5, 10000),  # Narrow range around best alpha
+            'alpha': np.append(np.linspace(alpha - 1, alpha + 1.5, 10000), best_params['alpha']),  # Narrow range around best alpha
             'fit_prior': [best_params['fit_prior']]  # Use the best fit_prior value found
         }
 
@@ -68,7 +72,7 @@ class Naive_Bayes(BaseModelClass):
             param_grid=param_grid, 
             scoring='accuracy', 
             cv=cv,  # 5-fold cross-validation
-            verbose=verbos,
+            verbose=self.verbose,
             n_jobs=n_jobs  # Use all available CPU cores
         )
 

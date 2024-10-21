@@ -88,6 +88,9 @@ class TextPreprocessor:
         :param num_sample: Number to sample
         :return: Sampled DataFrame
         """
+        if num_sample==0:
+          return df
+          
         df = df.sample(n=num_sample, random_state=42)  # random_state ensures reproducibility
 
         return df

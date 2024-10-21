@@ -12,7 +12,7 @@ from functools import partial
 import time
 import pickle
 
-from models.basemodelclass import BaseModelClass
+from basemodelclass import BaseModelClass
 class BiLSTM(BaseModelClass):
     def __init__(self, tokenizer, epochs=15, batch_size=64, max_feature = 5000, max_length = 100, output_dim = 128, optimizer = 'adam', embedding_dim = 32, verbose=0):
         super().__init__(model_name = 'BiLSTM')
@@ -92,18 +92,20 @@ class BiLSTM(BaseModelClass):
         self.best_training_time = time.time() - start_time
 
     def random_search(self, X_train_pad, y_train, X_test_pad, y_test, n_iter=200, cv=3, random_state=42, n_jobs=1,patience=3):
+        origin_param_dist = self.model.get_params()
         # Defining the parameter grid
         param_dist = {
-            'lstm_units': [50, 100, 150],            # Number of LSTM units
-            'embedding_dim': [32, 64, 128],          # Embedding dimensions
-            'dropout': [0.0, 0.2, 0.4],         # Dropout rates
-            'recurrent_dropout':[0.0],
+            'lstm_units': [50, 100, 150, origin_param_dist['lstm_units']],            # Number of LSTM units
+            'embedding_dim': [32, 64, 128,origin_param_dist['embedding_dim']],          # Embedding dimensions
+            'dropout': [0.0, 0.2, 0.4,origin_param_dist['dropout']],         # Dropout rates
+            'recurrent_dropout':[0.0, origin_param_dist['recurrent_dropout']],
             'output_dim':[1],
-            'learning_rate':[0.0001, 0.001, 0.01],
-            'batch_size': [32, 64, 128],                    # Batch size
-            'epochs': [3,5],                              # Number of epochs
-            'optimizer': ['adam', 'rmsprop'] # Optimizers
+            'learning_rate':[0.0001, 0.001, 0.01,origin_param_dist['learning_rate']],
+            'batch_size': [32, 64, 128, origin_param_dist['batch_size']],                    # Batch size
+            'epochs': [origin_param_dist['epochs'],origin_param_dist['epochs']+5],                              # Number of epochs
+            'optimizer': ['adam', 'rmsprop',origin_param_dist['optimizer']] # Optimizers
         }
+
         model = self._build_model(patience=patience)
         # Running RandomizedSearchCV
         self.random_search_cv = RandomizedSearchCV(estimator=model,
@@ -119,24 +121,33 @@ class BiLSTM(BaseModelClass):
         self.random_search_time = time.time() - start_time
 
     def grid_search(self, X_train_pad, y_train, X_test_pad, y_test, best_params, cv=3, n_jobs=1,patience=3):
-        param_grid = {
-            'lstm_units': [best_params['lstm_units']],            # Number of LSTM units
-            'embedding_dim': [best_params['embedding_dim']],          # Embedding dimensions
-            'dropout': [best_params['dropout']],         # Dropout rates
-            'recurrent_dropout':[best_params['recurrent_dropout']],
-            'learning_rate':[best_params['learning_rate']],
-            'batch_size': [int(best_params['batch_size']*0.9), best_params['batch_size'], int(best_params['batch_size']*1.1)],                    # Batch size
-            'epochs': [best_params['epochs']+5],                              # Number of epochs
-            'optimizer': ['adam', 'rmsprop'] # Optimizers
 
-            # 'lstm_units': [int(best_params['lstm_units']*0.9), best_params['lstm_units'], int(best_params['lstm_units']*1.1)],            # Number of LSTM units
-            # 'embedding_dim': [int(best_params['embedding_dim']*0.9), best_params['embedding_dim'],int(best_params['embedding_dim']*1.1)],          # Embedding dimensions
-            # 'dropout': [best_params['dropout']*0.9, best_params['dropout'], best_params['dropout']*1.1],         # Dropout rates
-            # 'recurrent_dropout':[best_params['recurrent_dropout']*0.9, best_params['recurrent_dropout'], best_params['recurrent_dropout']*1.1],
-            # 'learning_rate':[best_params['learning_rate']*0.9, best_params['learning_rate'], best_params['learning_rate']*1.1],
+        lstm_units = best_params['lstm_units'] if best_params['lstm_units'] is not None else 1
+        embedding_dim = best_params['embedding_dim'] if best_params['embedding_dim'] is not None else 1
+        dropout = best_params['dropout'] if best_params['dropout'] is not None else 1
+        recurrent_dropout = best_params['recurrent_dropout'] if best_params['recurrent_dropout'] is not None else 1
+        learning_rate = best_params['learning_rate'] if best_params['learning_rate'] is not None else 1
+        dropout = best_params['dropout'] if best_params['dropout'] is not None else 1
+        dropout = best_params['dropout'] if best_params['dropout'] is not None else 1
+
+        param_grid = {
+            # 'lstm_units': [best_params['lstm_units']],            # Number of LSTM units
+            # 'embedding_dim': [best_params['embedding_dim']],          # Embedding dimensions
+            # 'dropout': [best_params['dropout']],         # Dropout rates
+            # 'recurrent_dropout':[best_params['recurrent_dropout']],
+            # 'learning_rate':[best_params['learning_rate']],
             # 'batch_size': [int(best_params['batch_size']*0.9), best_params['batch_size'], int(best_params['batch_size']*1.1)],                    # Batch size
             # 'epochs': [best_params['epochs']+5],                              # Number of epochs
             # 'optimizer': ['adam', 'rmsprop'] # Optimizers
+
+            'lstm_units': [int(lstm_units*0.9), lstm_units, int(lstm_units*1.1)],            # Number of LSTM units
+            'embedding_dim': [int(embedding_dim*0.9), embedding_dim,int(embedding_dim*1.1)],          # Embedding dimensions
+            'dropout': [dropout*0.9, dropout, dropout*1.1],         # Dropout rates
+            'recurrent_dropout':[recurrent_dropout*0.9, recurrent_dropout, recurrent_dropout*1.1],
+            'learning_rate':[learning_rate*0.9, learning_rate, learning_rate*1.1],
+            'batch_size': [int(best_params['batch_size']*0.9), best_params['batch_size'], int(best_params['batch_size']*1.1)],                    # Batch size
+            'epochs': [best_params['epochs']+5],                              # Number of epochs
+            'optimizer': ['adam', 'rmsprop'] # Optimizers
         }
 
         model = self._build_model(patience=patience)

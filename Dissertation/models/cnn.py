@@ -10,7 +10,7 @@ from tensorflow.keras.layers import Flatten
 from tensorflow.keras.optimizers import Adam, RMSprop
 import pickle
 
-from models.basemodelclass import BaseModelClass
+from basemodelclass import BaseModelClass
 class CNN(BaseModelClass):
     def __init__(self, max_feature = 5000, max_length = 100, epochs=15, batch_size=64, output_dim = 128, optimizer = 'adam', embedding_dim = 32, verbose=0):
         super().__init__(model_name = 'CNN')
@@ -102,15 +102,17 @@ class CNN(BaseModelClass):
 
     def random_search(self, data, y, validation_data=None, n_iter = 200, cv=3, random_state=42, n_jobs=-1, patience=3):
         model = self._build_model(patience=patience)
+        origin_param_dist = self.model.get_params()
+
         param_dist = {
-            'filters': [128, 256],
-            'kernel_size': [3, 5],
-            'pool_size': [2, 3],               
-            'dropout_rate': [0.25, 0.5, 0.75],    
-            'learning_rate': [0.0005, 0.001],  
-            'batch_size': [64],    
-            'epochs': [3],
-            'optimizer': ['adam', 'rmsprop'],               
+            'filters': [128, 256, origin_param_dist['filters']],
+            'kernel_size': [3, 5, origin_param_dist['kernel_size']],
+            'pool_size': [2, 3, origin_param_dist['pool_size']],               
+            'dropout_rate': [0.25, 0.5, 0.75, origin_param_dist['dropout_rate']],    
+            'learning_rate': [0.0005, 0.001, origin_param_dist['learning_rate']],  
+            'batch_size': [64, origin_param_dist['batch_size']],    
+            'epochs': [origin_param_dist['epochs'], origin_param_dist['epochs']+5],
+            'optimizer': ['adam', 'rmsprop', origin_param_dist['optimizer']],               
         }
 
         self.random_search_cv = RandomizedSearchCV(estimator=model, param_distributions=param_dist, n_iter=n_iter, cv=cv, verbose=self.verbose, n_jobs=n_jobs, random_state=random_state)
@@ -126,24 +128,31 @@ class CNN(BaseModelClass):
 
     def grid_search(self, data, y, validation_data, best_params, cv=3, n_jobs=-1, patience=3):
         model = self._build_model(patience=patience)
-        param_dist =  {
-            'filters': [best_params['filters']],
-            'kernel_size': [best_params['kernel_size']],
-            'pool_size': [best_params['pool_size']],               
-            'dropout_rate': [best_params['dropout_rate']],    
-            'learning_rate': [best_params['learning_rate'], best_params['learning_rate']*1.1],  
-            'batch_size': [best_params['batch_size']],    
-            'epochs': [best_params['epochs']],
-            'optimizer': [best_params['optimizer']],     
 
-            # 'filters': [int(best_params['filters']*0.9), best_params['filters'], int(best_params['filters']*1.1)],
-            # 'kernel_size': [best_params['kernel_size']-1, best_params['kernel_size'], best_params['kernel_size']+1],
-            # 'pool_size': [best_params['pool_size'] -1, best_params['pool_size'], best_params['pool_size']+1],               
-            # 'dropout_rate': [best_params['dropout_rate']*0.9,best_params['dropout_rate'],best_params['dropout_rate']*1.1],    
-            # 'learning_rate': [best_params['learning_rate']*0.9, best_params['learning_rate'], best_params['learning_rate']*1.1],  
-            # 'batch_size': [int(best_params['batch_size']*0.8), best_params['batch_size'], int(best_params['batch_size']*1.2)],    
-            # 'epochs': [int(best_params['epochs']*0.8), best_params['epochs'], int(best_params['epochs']*1.2)],
-            # 'optimizer': [best_params['optimizer']],               
+        filters = best_params['filters'] if best_params['filters'] is not None else 1
+        kernel_size = best_params['kernel_size'] if best_params['kernel_size'] is not None else 2
+        pool_size = best_params['pool_size'] if best_params['pool_size'] is not None else 2
+        dropout_rate = best_params['dropout_rate'] if best_params['dropout_rate'] is not None else 0.001
+        learning_rate = best_params['learning_rate'] if best_params['learning_rate'] is not None else 0.001
+        
+        param_dist =  {
+            # 'filters': [best_params['filters']],
+            # 'kernel_size': [best_params['kernel_size']],
+            # 'pool_size': [best_params['pool_size']],               
+            # 'dropout_rate': [best_params['dropout_rate']],    
+            # 'learning_rate': [best_params['learning_rate'], best_params['learning_rate']*1.1],  
+            # 'batch_size': [best_params['batch_size']],    
+            # 'epochs': [best_params['epochs']],
+            # 'optimizer': [best_params['optimizer']],     
+
+            'filters': [int(filters*0.9), filters, int(filters*1.1)],
+            'kernel_size': [kernel_size-1, kernel_size, kernel_size+1],
+            'pool_size': [pool_size -1, pool_size, pool_size+1],               
+            'dropout_rate': [dropout_rate*0.9,dropout_rate,dropout_rate*1.1],    
+            'learning_rate': [learning_rate*0.9, learning_rate, learning_rate*1.1],  
+            'batch_size': [int(best_params['batch_size']*0.8), best_params['batch_size'], int(best_params['batch_size']*1.2)],    
+            'epochs': [int(best_params['epochs']*0.8), best_params['epochs'], int(best_params['epochs']*1.2)],
+            'optimizer': [best_params['optimizer']]              
         }
 
         self.grid_search_cv = GridSearchCV(
