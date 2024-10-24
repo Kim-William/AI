@@ -11,6 +11,7 @@ from scikeras.wrappers import KerasClassifier
 from functools import partial
 import time
 import pickle
+import numpy as np
 
 from basemodelclass import BaseModelClass
 class BiLSTM(BaseModelClass):
@@ -95,15 +96,15 @@ class BiLSTM(BaseModelClass):
         origin_param_dist = self.model.get_params()
         # Defining the parameter grid
         param_dist = {
-            'lstm_units': [50, 100, 150, origin_param_dist['lstm_units']],            # Number of LSTM units
-            'embedding_dim': [32, 64, 128,origin_param_dist['embedding_dim']],          # Embedding dimensions
-            'dropout': [0.0, 0.2, 0.4,origin_param_dist['dropout']],         # Dropout rates
-            'recurrent_dropout':[0.0, origin_param_dist['recurrent_dropout']],
+            'lstm_units': np.unique([50, 100, 150, origin_param_dist['lstm_units']]),            # Number of LSTM units
+            'embedding_dim': np.unique([32, 64, 128,origin_param_dist['embedding_dim']]),          # Embedding dimensions
+            'dropout': np.unique([0.0, 0.2, 0.4,origin_param_dist['dropout']]),         # Dropout rates
+            'recurrent_dropout':np.unique([0.0, origin_param_dist['recurrent_dropout']]),
             'output_dim':[1],
-            'learning_rate':[0.0001, 0.001, 0.01,origin_param_dist['learning_rate']],
-            'batch_size': [32, 64, 128, origin_param_dist['batch_size']],                    # Batch size
-            'epochs': [origin_param_dist['epochs'],origin_param_dist['epochs']+5],                              # Number of epochs
-            'optimizer': ['adam', 'rmsprop',origin_param_dist['optimizer']] # Optimizers
+            'learning_rate':np.unique([0.0001, 0.001, 0.01,origin_param_dist['learning_rate']]),
+            'batch_size': np.unique([64, 128, origin_param_dist['batch_size']]),                    # Batch size
+            'epochs': [origin_param_dist['epochs']+5],                              # Number of epochs
+            'optimizer': np.unique(['adam', 'rmsprop',origin_param_dist['optimizer']]) # Optimizers
         }
 
         model = self._build_model(patience=patience)

@@ -9,6 +9,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.layers import Flatten
 from tensorflow.keras.optimizers import Adam, RMSprop
 import pickle
+import numpy as np
 
 from basemodelclass import BaseModelClass
 class CNN(BaseModelClass):
@@ -105,14 +106,14 @@ class CNN(BaseModelClass):
         origin_param_dist = self.model.get_params()
 
         param_dist = {
-            'filters': [128, 256, origin_param_dist['filters']],
-            'kernel_size': [3, 5, origin_param_dist['kernel_size']],
-            'pool_size': [2, 3, origin_param_dist['pool_size']],               
-            'dropout_rate': [0.25, 0.5, 0.75, origin_param_dist['dropout_rate']],    
-            'learning_rate': [0.0005, 0.001, origin_param_dist['learning_rate']],  
-            'batch_size': [64, origin_param_dist['batch_size']],    
-            'epochs': [origin_param_dist['epochs'], origin_param_dist['epochs']+5],
-            'optimizer': ['adam', 'rmsprop', origin_param_dist['optimizer']],               
+            'filters': np.unique([128, 256, origin_param_dist['filters']]),
+            'kernel_size': np.unique([3, 5, origin_param_dist['kernel_size']]),
+            'pool_size': np.unique([2, 3, origin_param_dist['pool_size']]),               
+            'dropout_rate': np.unique([0.25, 0.5, 0.75, origin_param_dist['dropout_rate']]),    
+            'learning_rate': np.unique([0.0005, 0.001, origin_param_dist['learning_rate']]),  
+            'batch_size': np.unique([64, origin_param_dist['batch_size']]),    
+            'epochs': [origin_param_dist['epochs']+5],
+            'optimizer': np.unique(['adam', 'rmsprop', origin_param_dist['optimizer']]),               
         }
 
         self.random_search_cv = RandomizedSearchCV(estimator=model, param_distributions=param_dist, n_iter=n_iter, cv=cv, verbose=self.verbose, n_jobs=n_jobs, random_state=random_state)

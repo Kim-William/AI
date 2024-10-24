@@ -7,6 +7,7 @@ from scikeras.wrappers import KerasClassifier
 from sklearn.model_selection import RandomizedSearchCV, GridSearchCV
 from tensorflow.keras.callbacks import EarlyStopping
 import pickle
+import numpy as np
 
 from basemodelclass import BaseModelClass
 class RNN(BaseModelClass):
@@ -100,11 +101,11 @@ class RNN(BaseModelClass):
         origin_param_dist = self.model.get_params()
 
         param_dist = {
-            'rnn_units': [16, 32, 64, origin_param_dist['rnn_units']],
-            'embedding_dim': [32, 64, 128, origin_param_dist['embedding_dim']],
-            'optimizer': ['adam', 'rmsprop', origin_param_dist['optimizer']],
-            'epochs': [origin_param_dist['epochs']-3, origin_param_dist['epochs'], origin_param_dist['epochs']+3, origin_param_dist['epochs']+10],
-            'batch_size': [16, 32, 64, 128, origin_param_dist['epochs']]
+            'rnn_units': np.unique([16, 32, 64, origin_param_dist['rnn_units']]),
+            'embedding_dim': np.unique([32, 64, 128, origin_param_dist['embedding_dim']]),
+            'optimizer': np.unique(['adam', 'rmsprop', origin_param_dist['optimizer']]),
+            'epochs': [origin_param_dist['epochs']+5],
+            'batch_size': np.unique([32, 64, origin_param_dist['batch_size']])
         }
 
         self.random_search_cv = RandomizedSearchCV(
