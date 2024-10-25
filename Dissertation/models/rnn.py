@@ -23,11 +23,11 @@ class RNN(BaseModelClass):
         self.rnn_unit = rnn_unit
         self.verbose = verbose
     
-    def _create_rnn_model(self, input_dim, embedding_dim, rnn_units, input_length, optimizer):
+    def _create_rnn_model(self, input_dim, embedding_dim, input_length, optimizer, rnn_units=64):
         # Define a simple RNN model
         model = Sequential()
         model.add(Embedding(input_dim=input_dim, output_dim=embedding_dim, input_length=input_length))
-        model.add(SimpleRNN(rnn_units))
+        model.add(SimpleRNN(units=self.rnn_unit))
         model.add(Dense(1, activation='sigmoid'))
         model.build(input_shape=(None, input_length))
         model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
@@ -65,12 +65,11 @@ class RNN(BaseModelClass):
             build_fn=build_fn,
             input_dim=self.max_feature,
             input_length=self.max_length,
-            rnn_units=best_params['rnn_units'],       
             embedding_dim=best_params['embedding_dim'],
             optimizer=best_params['optimizer'],
-            epochs=best_params['epochs'] +10,
+            epochs=best_params['epochs'],
             batch_size=best_params['batch_size'],
-            verbose=0,
+            verbose=self.verbose,
             callbacks=[EarlyStopping(monitor='val_loss', patience=patience, restore_best_weights=True)]
         )
         return searched_model
@@ -98,14 +97,13 @@ class RNN(BaseModelClass):
 
     def random_search(self, data, y, validation_data=None, n_iter=200, cv=3, random_state=42, n_jobs=-1, patience=3):
         model = self._build_model(patience=patience)
-        origin_param_dist = self.model.get_params()
-
+        origin_param_dist = model.get_params()
         param_dist = {
-            'rnn_units': np.unique([16, 32, 64, origin_param_dist['rnn_units']]),
-            'embedding_dim': np.unique([32, 64, 128, origin_param_dist['embedding_dim']]),
+            'embedding_dim': np.unique([64, 128, origin_param_dist['embedding_dim']]),
             'optimizer': np.unique(['adam', 'rmsprop', origin_param_dist['optimizer']]),
             'epochs': [origin_param_dist['epochs']+5],
-            'batch_size': np.unique([32, 64, origin_param_dist['batch_size']])
+            'batch_size': np.unique([origin_param_dist['batch_size']]),
+            'validation_batch_size': np.unique([origin_param_dist['batch_size'],origin_param_dist['batch_size']*2])
         }
 
         self.random_search_cv = RandomizedSearchCV(
@@ -130,7 +128,6 @@ class RNN(BaseModelClass):
     def grid_search(self, data, y, validation_data, best_params, cv=3, n_jobs=-1, patience=3):
         model = self._build_model(patience=patience)
 
-        rnn_units = best_params['rnn_units'] if best_params['rnn_units'] is not None else 1
         embedding_dim = best_params['embedding_dim'] if best_params['embedding_dim'] is not None else 1
 
         param_dist = {
@@ -139,11 +136,11 @@ class RNN(BaseModelClass):
             # 'optimizer': [best_params['optimizer']], 
             # 'epochs': [best_params['epochs']],                
             # 'batch_size': [best_params['batch_size']]   
-            'rnn_units': [int(rnn_units*0.9),int(rnn_units*0.95), rnn_units, int(rnn_units*1.05), int(rnn_units*1.1)],     
+            # 'rnn_units': [int(rnn_units*0.9),int(rnn_units*0.95), rnn_units, int(rnn_units*1.05), int(rnn_units*1.1)],     
             'embedding_dim': [int(embedding_dim*0.9),int(embedding_dim*0.95),embedding_dim, int(embedding_dim*1.05), int(embedding_dim*1.1)],      
             'optimizer': [best_params['optimizer']], 
             'epochs': [best_params['epochs']],                
-            'batch_size': [best_params['batch_size']]          
+            'batch_size': [best_params['batch_size'],best_params['batch_size']*2]          
         }
 
         self.grid_search_cv = GridSearchCV(

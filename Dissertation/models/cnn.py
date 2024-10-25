@@ -68,8 +68,6 @@ class CNN(BaseModelClass):
         searched_model = KerasClassifier(
             build_fn=build_fn,
             filters=best_params['filters'], 
-            kernel_size=best_params['kernel_size'], 
-            pool_size=best_params['pool_size'], 
             dropout_rate=best_params['dropout_rate'], 
             learning_rate = best_params['learning_rate'],
             batch_size=best_params['batch_size'],
@@ -106,9 +104,7 @@ class CNN(BaseModelClass):
         origin_param_dist = self.model.get_params()
 
         param_dist = {
-            'filters': np.unique([128, 256, origin_param_dist['filters']]),
-            'kernel_size': np.unique([3, 5, origin_param_dist['kernel_size']]),
-            'pool_size': np.unique([2, 3, origin_param_dist['pool_size']]),               
+            'filters': np.unique([128, 256, origin_param_dist['filters']]),        
             'dropout_rate': np.unique([0.25, 0.5, 0.75, origin_param_dist['dropout_rate']]),    
             'learning_rate': np.unique([0.0005, 0.001, origin_param_dist['learning_rate']]),  
             'batch_size': np.unique([64, origin_param_dist['batch_size']]),    
@@ -131,8 +127,6 @@ class CNN(BaseModelClass):
         model = self._build_model(patience=patience)
 
         filters = best_params['filters'] if best_params['filters'] is not None else 1
-        kernel_size = best_params['kernel_size'] if best_params['kernel_size'] is not None else 2
-        pool_size = best_params['pool_size'] if best_params['pool_size'] is not None else 2
         dropout_rate = best_params['dropout_rate'] if best_params['dropout_rate'] is not None else 0.001
         learning_rate = best_params['learning_rate'] if best_params['learning_rate'] is not None else 0.001
         
@@ -146,13 +140,11 @@ class CNN(BaseModelClass):
             # 'epochs': [best_params['epochs']],
             # 'optimizer': [best_params['optimizer']],     
 
-            'filters': [int(filters*0.9), filters, int(filters*1.1)],
-            'kernel_size': [kernel_size-1, kernel_size, kernel_size+1],
-            'pool_size': [pool_size -1, pool_size, pool_size+1],               
+            'filters': [int(filters*0.9), filters, int(filters*1.1)],        
             'dropout_rate': [dropout_rate*0.9,dropout_rate,dropout_rate*1.1],    
             'learning_rate': [learning_rate*0.9, learning_rate, learning_rate*1.1],  
-            'batch_size': [int(best_params['batch_size']*0.8), best_params['batch_size'], int(best_params['batch_size']*1.2)],    
-            'epochs': [int(best_params['epochs']*0.8), best_params['epochs'], int(best_params['epochs']*1.2)],
+            'batch_size': [best_params['batch_size']],    
+            'epochs': [best_params['epochs']],
             'optimizer': [best_params['optimizer']]              
         }
 

@@ -94,17 +94,28 @@ class BiLSTM(BaseModelClass):
 
     def random_search(self, X_train_pad, y_train, X_test_pad, y_test, n_iter=200, cv=3, random_state=42, n_jobs=1,patience=3):
         origin_param_dist = self.model.get_params()
+        
+        
+        
         # Defining the parameter grid
         param_dist = {
-            'lstm_units': np.unique([50, 100, 150, origin_param_dist['lstm_units']]),            # Number of LSTM units
-            'embedding_dim': np.unique([32, 64, 128,origin_param_dist['embedding_dim']]),          # Embedding dimensions
-            'dropout': np.unique([0.0, 0.2, 0.4,origin_param_dist['dropout']]),         # Dropout rates
-            'recurrent_dropout':np.unique([0.0, origin_param_dist['recurrent_dropout']]),
+            'lstm_units': np.unique([50, 100, 150]),            # Number of LSTM units
+            'embedding_dim': np.unique([32, 64, 128]),          # Embedding dimensions
+            'dropout': np.unique([0.0, 0.2, 0.4]),         # Dropout rates
+            'recurrent_dropout':np.unique([0.0]),
             'output_dim':[1],
-            'learning_rate':np.unique([0.0001, 0.001, 0.01,origin_param_dist['learning_rate']]),
-            'batch_size': np.unique([64, 128, origin_param_dist['batch_size']]),                    # Batch size
-            'epochs': [origin_param_dist['epochs']+5],                              # Number of epochs
-            'optimizer': np.unique(['adam', 'rmsprop',origin_param_dist['optimizer']]) # Optimizers
+            'learning_rate':np.unique([0.0001, 0.001, 0.01]),
+            'optimizer': np.unique(['adam', 'rmsprop']),
+            'epochs': [self.epochs],
+            # 'lstm_units': np.unique([50, 100, 150, origin_param_dist['lstm_units']]),            # Number of LSTM units
+            # 'embedding_dim': np.unique([32, 64, 128,origin_param_dist['embedding_dim']]),          # Embedding dimensions
+            # 'dropout': np.unique([0.0, 0.2, 0.4,origin_param_dist['dropout']]),         # Dropout rates
+            # 'recurrent_dropout':np.unique([0.0, origin_param_dist['recurrent_dropout']]),
+            # 'output_dim':[1],
+            # 'learning_rate':np.unique([0.0001, 0.001, 0.01,origin_param_dist['learning_rate']]),
+            # 'batch_size': np.unique(self.batch_size, self.batch_size*2),                    # Batch size
+            # 'epochs': [self.epochs],                              # Number of epochs
+            # 'optimizer': np.unique(['adam', 'rmsprop']) # Optimizers
         }
 
         model = self._build_model(patience=patience)
@@ -146,9 +157,8 @@ class BiLSTM(BaseModelClass):
             'dropout': [dropout*0.9, dropout, dropout*1.1],         # Dropout rates
             'recurrent_dropout':[recurrent_dropout*0.9, recurrent_dropout, recurrent_dropout*1.1],
             'learning_rate':[learning_rate*0.9, learning_rate, learning_rate*1.1],
-            'batch_size': [int(best_params['batch_size']*0.9), best_params['batch_size'], int(best_params['batch_size']*1.1)],                    # Batch size
-            'epochs': [best_params['epochs']+5],                              # Number of epochs
-            'optimizer': ['adam', 'rmsprop'] # Optimizers
+            'optimizer': ['adam', 'rmsprop'],
+            'epochs': [self.epochs]
         }
 
         model = self._build_model(patience=patience)

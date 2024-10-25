@@ -50,7 +50,7 @@ class XGBoost(BaseModelClass):
     
     def random_search(self, data, y, n_iter, cv, random_state, n_jobs):
         model = xgb.XGBClassifier(tree_method='gpu_hist', use_label_encoder=False, eval_metric='logloss', verbosity=self.verbose)
-        origin_param_dist = self.model.get_params()
+        origin_param_dist = model.get_params()
         param_dist = {
             'learning_rate': np.append(np.linspace(0.05, 0.2, 5), origin_param_dist['learning_rate']),  
             'n_estimators': np.append(np.arange(50, 200, 250), origin_param_dist['n_estimators']),  
@@ -99,7 +99,6 @@ class XGBoost(BaseModelClass):
         param_grid = {}
         learning_rate = best_params['learning_rate'] if best_params['learning_rate'] is not None else 0.01
         n_estimators = best_params['n_estimators'] if best_params['n_estimators'] is not None else 50
-        max_depth = best_params['max_depth'] if best_params['max_depth'] is not None else 5
         min_child_weight = best_params['min_child_weight'] if best_params['min_child_weight'] is not None else 2
         subsample = best_params['subsample'] if best_params['subsample'] is not None else 0.06
         colsample_bytree = best_params['colsample_bytree'] if best_params['colsample_bytree'] is not None else 0.6
@@ -107,7 +106,6 @@ class XGBoost(BaseModelClass):
 
         param_grid = self._append_to_param_dist(param_grid, 'learning_rate', best_params['learning_rate'], learning_rate-0.01, learning_rate+0.01, 3)
         param_grid = self._append_to_param_dist(param_grid, 'n_estimators', best_params['n_estimators'], n_estimators-50, n_estimators+50, 3)
-        param_grid = self._append_to_param_dist(param_grid, 'max_depth', best_params['max_depth'], max_depth-1, max_depth+1, 3)
         param_grid = self._append_to_param_dist(param_grid, 'min_child_weight', best_params['min_child_weight'], min_child_weight-1, min_child_weight+1, 3)
         param_grid = self._append_to_param_dist(param_grid, 'subsample', best_params['subsample'], subsample-0.05, subsample+0.05, 3)
         param_grid = self._append_to_param_dist(param_grid, 'colsample_bytree', best_params['colsample_bytree'], colsample_bytree-0.05, colsample_bytree+0.05, 3)
