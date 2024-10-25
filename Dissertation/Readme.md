@@ -17,26 +17,26 @@ This command will install all the dependencies listed in the requirements.txt fi
 ### 2. Running the Models
 After installing the requirements, you can run the models using the following commands:
 
-For the traditional models such as Logistic_regression, XGBoost, Naive_bayse, execute:
 
+#### For the traditional models such as Logistic_regression, XGBoost, Naive_bayse, execute:
 [bash]
 
 python hyper_traditional.py
 
-For the RNN model, execute:
 
+#### For the RNN model, execute:
 [bash]
 
 python hyper_rnn.py
 
-For the CNN model, execute:
 
+#### For the CNN model, execute:
 [bash]
 
 python hyper_cnn.py
 
-For the BiLSTM model, execute:
 
+#### For the BiLSTM model, execute:
 [bash]
 
 python hyper_bilstm.py
