@@ -101,12 +101,13 @@ class BiLSTM(BaseModelClass):
         param_dist = {
             'lstm_units': np.unique([50, 100, 150]),            # Number of LSTM units
             'embedding_dim': np.unique([32, 64, 128]),          # Embedding dimensions
-            'dropout': np.unique([0.0, 0.2, 0.4]),         # Dropout rates
-            'recurrent_dropout':np.unique([0.0]),
+            'dropout': np.unique([0.01, 0.2, 0.4]),         # Dropout rates
+            'recurrent_dropout':np.unique([0.01, 0.0, 0.2]),
             'output_dim':[1],
             'learning_rate':np.unique([0.0001, 0.001, 0.01]),
             'optimizer': np.unique(['adam', 'rmsprop']),
             'epochs': [self.epochs],
+            'batch_size': [self.batch_size],
             # 'lstm_units': np.unique([50, 100, 150, origin_param_dist['lstm_units']]),            # Number of LSTM units
             # 'embedding_dim': np.unique([32, 64, 128,origin_param_dist['embedding_dim']]),          # Embedding dimensions
             # 'dropout': np.unique([0.0, 0.2, 0.4,origin_param_dist['dropout']]),         # Dropout rates
@@ -139,8 +140,7 @@ class BiLSTM(BaseModelClass):
         dropout = best_params['dropout'] if best_params['dropout'] is not None else 1
         recurrent_dropout = best_params['recurrent_dropout'] if best_params['recurrent_dropout'] is not None else 1
         learning_rate = best_params['learning_rate'] if best_params['learning_rate'] is not None else 1
-        dropout = best_params['dropout'] if best_params['dropout'] is not None else 1
-        dropout = best_params['dropout'] if best_params['dropout'] is not None else 1
+        optimizer = best_params['optimizer'] if best_params['optimizer'] is not None else 'adam'
 
         param_grid = {
             # 'lstm_units': [best_params['lstm_units']],            # Number of LSTM units
@@ -152,12 +152,13 @@ class BiLSTM(BaseModelClass):
             # 'epochs': [best_params['epochs']+5],                              # Number of epochs
             # 'optimizer': ['adam', 'rmsprop'] # Optimizers
 
-            'lstm_units': [int(lstm_units*0.9), lstm_units, int(lstm_units*1.1)],            # Number of LSTM units
-            'embedding_dim': [int(embedding_dim*0.9), embedding_dim,int(embedding_dim*1.1)],          # Embedding dimensions
+            'lstm_units': [lstm_units],            # Number of LSTM units
+            'embedding_dim': [embedding_dim],          # Embedding dimensions
             'dropout': [dropout*0.9, dropout, dropout*1.1],         # Dropout rates
             'recurrent_dropout':[recurrent_dropout*0.9, recurrent_dropout, recurrent_dropout*1.1],
             'learning_rate':[learning_rate*0.9, learning_rate, learning_rate*1.1],
-            'optimizer': ['adam', 'rmsprop'],
+            'optimizer': [optimizer],
+            'batch_size': [self.batch_size],
             'epochs': [self.epochs]
         }
 

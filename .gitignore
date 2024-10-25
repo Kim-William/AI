@@ -105,7 +105,6 @@ Deep-Learning/02.Recurrent Neural Networks
 Machine-Learning-in-Practice/07.Predicting Atmospheric Emissions/Dataset
 NLP/01_WikiQA_Seq2Seq/Input
 NLP/01_WikiQA_Seq2Seq/Output
-Dissertation/InputData
 Dissertation/__pycache__
 NLP/Develop a Generative Chatbot
 NLP/nlp_seq2seq_embededvector/Data
@@ -116,6 +115,12 @@ cuda-keyring_1.1-1_all.deb.1
 cuda-keyring_1.1-1_all.deb.2
 cuda-keyring_1.1-1_all.deb.3
 Dissertation/Output
+Dissertation/InputData/7817_1.csv
+Dissertation/InputData/Amazon_review.csv
+Dissertation/InputData/test.csv
+Dissertation/InputData/train.csv
+Dissertation/InputData/test.csv:Zone.Identifier
+Dissertation/InputData/train.csv:Zone.Identifier
 Dissertation/independent_model_testing/Output
 Dissertation/sentiment-analysis-master/saves/LSTM_model-model.pt
 Dissertation/sentiment-analysis-master/saves/LSTM_model-model.pt:Zone.Identifier
