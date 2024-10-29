@@ -46,7 +46,7 @@ class BiLSTM(BaseModelClass):
     def _build_model(self,patience=3):
                 # Partially apply the model parameters
         build_fn = partial(self.__create_bilstm_model,
-                           dropout=0, recurrent_dropout=0, optimizer='adam',output_dim=1, lstm_units=100, embedding_dim=64,learning_rate=0.1)
+                           dropout=0.01, recurrent_dropout=0.01, optimizer='adam',output_dim=1, lstm_units=100, embedding_dim=64,learning_rate=0.1)
         
         model = KerasClassifier(
             build_fn=build_fn, 
@@ -73,7 +73,6 @@ class BiLSTM(BaseModelClass):
             output_dim=1, 
             lstm_units=best_params['lstm_units'], 
             embedding_dim=best_params['embedding_dim'],
-            learning_rate=best_params['learning_rate'],
             callbacks=[EarlyStopping(monitor='val_loss', patience=patience, restore_best_weights=True)])
         return model
     
@@ -99,12 +98,12 @@ class BiLSTM(BaseModelClass):
         
         # Defining the parameter grid
         param_dist = {
-            'lstm_units': np.unique([50, 100, 150]),            # Number of LSTM units
-            'embedding_dim': np.unique([32, 64, 128]),          # Embedding dimensions
-            'dropout': np.unique([0.01, 0.2, 0.4]),         # Dropout rates
-            'recurrent_dropout':np.unique([0.01, 0.0, 0.2]),
+            'lstm_units': np.unique([50, 100, origin_param_dist['lstm_units']]),            # Number of LSTM units
+            'embedding_dim': np.unique([64, origin_param_dist['embedding_dim']]),          # Embedding dimensions
+            'dropout': np.unique([0.01, 0.2, 0.4, origin_param_dist['dropout']]),         # Dropout rates
+            'recurrent_dropout':np.unique([0.0, 0.01,  0.2, origin_param_dist['recurrent_dropout']]),
             'output_dim':[1],
-            'learning_rate':np.unique([0.0001, 0.001, 0.01]),
+            # 'learning_rate':np.unique([0.0001, 0.001, 0.01, origin_param_dist['learning_rate']]),
             'optimizer': np.unique(['adam', 'rmsprop']),
             'epochs': [self.epochs],
             'batch_size': [self.batch_size],
@@ -139,7 +138,7 @@ class BiLSTM(BaseModelClass):
         embedding_dim = best_params['embedding_dim'] if best_params['embedding_dim'] is not None else 1
         dropout = best_params['dropout'] if best_params['dropout'] is not None else 1
         recurrent_dropout = best_params['recurrent_dropout'] if best_params['recurrent_dropout'] is not None else 1
-        learning_rate = best_params['learning_rate'] if best_params['learning_rate'] is not None else 1
+        # learning_rate = best_params['learning_rate'] if best_params['learning_rate'] is not None else 1
         optimizer = best_params['optimizer'] if best_params['optimizer'] is not None else 'adam'
 
         param_grid = {
@@ -156,7 +155,7 @@ class BiLSTM(BaseModelClass):
             'embedding_dim': [embedding_dim],          # Embedding dimensions
             'dropout': [dropout*0.9, dropout, dropout*1.1],         # Dropout rates
             'recurrent_dropout':[recurrent_dropout*0.9, recurrent_dropout, recurrent_dropout*1.1],
-            'learning_rate':[learning_rate*0.9, learning_rate, learning_rate*1.1],
+            # 'learning_rate':[learning_rate*0.9, learning_rate, learning_rate*1.1],
             'optimizer': [optimizer],
             'batch_size': [self.batch_size],
             'epochs': [self.epochs]

@@ -102,8 +102,8 @@ class RNN(BaseModelClass):
             'embedding_dim': np.unique([64, 128, origin_param_dist['embedding_dim']]),
             'optimizer': np.unique(['adam', 'rmsprop', origin_param_dist['optimizer']]),
             'epochs': [origin_param_dist['epochs']+5],
-            'batch_size': np.unique([origin_param_dist['batch_size']]),
-            'validation_batch_size': np.unique([origin_param_dist['batch_size'],origin_param_dist['batch_size']*2])
+            'batch_size': [origin_param_dist['batch_size']],
+            'validation_batch_size': [origin_param_dist['batch_size']]
         }
 
         self.random_search_cv = RandomizedSearchCV(

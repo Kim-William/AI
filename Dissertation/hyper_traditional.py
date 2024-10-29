@@ -55,14 +55,14 @@ if gpus:
 # %%
 NUM_SAMPLE = 10000
 TEST_RATIO=0.2
-BATCH_SIZE=128
+BATCH_SIZE=512
 EPOCHS = 10
 MAX_WORD_COUNT = 5000
 MAX_LENGTH = 222
-OUTPUT_RESULT_DIR = "Output/result"
-OUTPUT_MODELS_DIR = "Output/models"
-INPUT_DIR = f"InputData/sample_{NUM_SAMPLE}"
+OUTPUT_RESULT_DIR = "output/result"
+OUTPUT_MODELS_DIR = "output/models"
 USE_TEST_DATA = True
+INPUT_DIR = f"input/sample_{NUM_SAMPLE}"
 
 os.makedirs(OUTPUT_RESULT_DIR, exist_ok=True)
 os.makedirs(OUTPUT_MODELS_DIR, exist_ok=True)
@@ -129,15 +129,15 @@ logistic_regression = Logistic_Regression(verbose=1)
 logistic_regression.train_model(X_train_tfidf, y_train)
 
 # 2. Random SearchCV
-logistic_regression.random_search(X_train_tfidf, y_train, n_iter=1500, cv=10, random_state=42, n_jobs=-1)
-logistic_regression.random_search_elasticnet(X_train_tfidf, y_train, n_iter=1500, cv=10, random_state=42, n_jobs=-1)
+logistic_regression.random_search(X_train_tfidf, y_train, n_iter=600, cv=3, random_state=42, n_jobs=-1)
+logistic_regression.random_search_elasticnet(X_train_tfidf, y_train, n_iter=600, cv=3, random_state=42, n_jobs=-1)
 
 _, best_params = eval_and_visual.compare_models_accuracy_and_get_best_params({'Original': logistic_regression.model,
                                                               'RandomizedSearchCV': logistic_regression.random_search_cv,
                                                               'ElasticNet': logistic_regression.random_search_cv_elasticnet}, X_test_tfidf, y_test)
 
 # 3. Grid SearchCV
-logistic_regression.grid_search(X_train_tfidf, y_train, cv=10, n_jobs=-1,best_params=best_params)
+logistic_regression.grid_search(X_train_tfidf, y_train, cv=5, n_jobs=-1,best_params=best_params)
 
 # 4. Train Best Model
 logistic_regression.train_best_model(X_train_tfidf, y_train, logistic_regression.grid_search_cv.best_params_)
@@ -159,16 +159,14 @@ logistic_regression.save_model_and_params(
 xgboost = XGBoost(verbose=1)
 xgboost.train_model(X_train_tfidf.toarray(), y_train)
 
-X_train_tfidf = X_train_tfidf.astype(np.float32)
-
 # 2. Random SearchCV
-xgboost.random_search(X_train_tfidf.toarray(), y_train, n_iter=2000, cv=10, random_state=42, n_jobs=-1)
+xgboost.random_search(X_train_tfidf.toarray(), y_train, n_iter=700, cv=3, random_state=42, n_jobs=-1)
 
 _, best_params = eval_and_visual.compare_models_accuracy_and_get_best_params({'Original': xgboost.model,
                                                               'RandomizedSearchCV': xgboost.random_search_cv}, X_test_tfidf.toarray(), y_test)
 
 # 3. Grid SearchCV
-xgboost.grid_search(X_train_tfidf.toarray(), y_train, cv=10,  n_jobs=-1, best_params=best_params)
+xgboost.grid_search(X_train_tfidf.toarray(), y_train, cv=5,  n_jobs=-1, best_params=best_params)
 
 # 4. Train Best Model
 xgboost.train_best_model(X_train_tfidf.toarray(), y_train, xgboost.grid_search_cv.best_params_)
@@ -192,14 +190,14 @@ naive_bayes.train_model(X_train_tfidf, y_train)
 
 # 2. Random SearchCV
 # naive_bayes.random_search(X_train_tfidf, y_train, n_iter=30, cv=2, verbos=0, random_state=42, n_jobs=-1)
-naive_bayes.random_search(X_train_tfidf, y_train, n_iter=5000, cv=10, random_state=42, n_jobs=-1)
+naive_bayes.random_search(X_train_tfidf, y_train, n_iter=1000, cv=3, random_state=42, n_jobs=-1)
 
 _, best_params = eval_and_visual.compare_models_accuracy_and_get_best_params({'Original': naive_bayes.model,
                                                               'RandomizedSearchCV': naive_bayes.random_search_cv}, X_test_tfidf, y_test)
 
 # 3. Grid SearchCV
 # naive_bayes.grid_search(X_train_tfidf, y_train, naive_bayes.random_search_cv.best_params_, cv=2, verbos=1, n_jobs=-1)
-naive_bayes.grid_search(X_train_tfidf, y_train, best_params=best_params, cv=10, n_jobs=-1)
+naive_bayes.grid_search(X_train_tfidf, y_train, best_params=best_params, cv=5, n_jobs=-1)
 
 # 4. Train Best Model
 naive_bayes.train_best_model(X_train_tfidf, y_train, naive_bayes.grid_search_cv.best_params_)

@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report, accuracy_score
 import os
 
 class Evaluation_Visualization():
-    def __init__(self, out_result_dir="Output/result", out_models_dir="Output/models"):
+    def __init__(self, out_result_dir="output/result", out_models_dir="output/models"):
         # Dictionary to store the results
         self.results = {
             'Model': [],
@@ -112,12 +112,40 @@ class Evaluation_Visualization():
         return [1 if prob > 0.5 else 0 for prob in y_pred_prob]
 
     def evaluate_model_class(self, model_class, X_test, y_test, file_name = None):
+        self.results = {
+            'Model': [],
+            'Training-Time':[],
+            'Accuracy': [],
+            'Precision (Class 0)': [],
+            'Precision (Class 1)': [],
+            'Recall (Class 0)': [],
+            'Recall (Class 1)': [],
+            'F1-Score (Class 0)': [],
+            'F1-Score (Class 1)': []
+        }
+        
         if file_name is None:
             file_name = f'HyperParameter_tuning_result_{model_class.model_name}.xlsx'
         y_pred = self._predict_model(model_class.model, X_test)
         y_pred_random =self. _predict_model(model_class.random_search_cv.best_estimator_, X_test)
         y_pred_grid = self._predict_model(model_class.grid_search_cv.best_estimator_, X_test)
         y_pred_best = self._predict_model(model_class.best_model, X_test)
+
+        self._evaluate_model(model_class.training_time, model_class.model_name, y_test, y_pred)
+        self._evaluate_model(model_class.random_search_time,  model_class.model_name + '_random_search', y_test, y_pred_random)
+        self._evaluate_model(model_class.grid_search_time,  model_class.model_name + '_grid_search', y_test, y_pred_grid)
+        self._evaluate_model(model_class.best_training_time,  model_class.model_name + '_best', y_test, y_pred_best)
+
+        self.df_results = pd.DataFrame(self.results)
+        self.df_results.to_excel(os.path.join(self.OUTPUT_RESULT_DIR, file_name))
+
+    def evaluate_model_class_xgboost(self, model_class, X_test, y_test, file_name = None):
+        if file_name is None:
+            file_name = f'HyperParameter_tuning_result_{model_class.model_name}.xlsx'
+        y_pred = self._predict_model(model_class.model, X_test.toarray())
+        y_pred_random =self. _predict_model(model_class.random_search_cv.best_estimator_, X_test)
+        y_pred_grid = self._predict_model(model_class.grid_search_cv.best_estimator_, X_test)
+        y_pred_best = self._predict_model(model_class.best_model, X_test.toarray())
 
         self._evaluate_model(model_class.training_time, model_class.model_name, y_test, y_pred)
         self._evaluate_model(model_class.random_search_time,  model_class.model_name + '_random_search', y_test, y_pred_random)

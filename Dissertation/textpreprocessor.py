@@ -19,7 +19,7 @@ import joblib
 class TextPreprocessor:
     # Example usage:
     _stop_words = set(stopwords.words('english'))
-    def __init__(self, max_features=3000, max_length = 100, input_dir = 'InputData', data_set_header = ['polarity', 'title', 'review']):
+    def __init__(self, max_features=3000, max_length = 100, input_dir = 'input', data_set_header = ['polarity', 'title', 'review']):
         """
         Constructor to initialize paths, column headers, and TF-IDF settings.
         

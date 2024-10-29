@@ -107,7 +107,7 @@ class CNN(BaseModelClass):
             'filters': np.unique([128, 256, origin_param_dist['filters']]),        
             'dropout_rate': np.unique([0.25, 0.5, 0.75, origin_param_dist['dropout_rate']]),    
             'learning_rate': np.unique([0.0005, 0.001, origin_param_dist['learning_rate']]),  
-            'batch_size': np.unique([64, origin_param_dist['batch_size']]),    
+            'batch_size': [origin_param_dist['batch_size']],    
             'epochs': [origin_param_dist['epochs']+5],
             'optimizer': np.unique(['adam', 'rmsprop', origin_param_dist['optimizer']]),               
         }
